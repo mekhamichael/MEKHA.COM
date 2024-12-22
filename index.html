@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Front-End Developer Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/kMVq6E2Z9NfE6XPS0OPJ3ILk4BfZy9e0ZZIUx8DGGYX+u+d4fku7N5zKUnhqzVn5swP+Ig1rf8eDA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+        integrity="sha512-IY2HyRHf3z93YHb0Hg1c+yfFSqBRBKWh0LCxJJ3j0URcJQs8G/5lUBi6qZbdE5+jEQ8qIvPT8/WHm6U6ki4kA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+
+    <section class="hero" id="home">
+        <h1>WELCOME TO MY PORTFOLIO</h1>
+        <div class="image">
+            <img src="images/me.jpg" alt="Michael Mekha Image">
+        </div>
+        <h1>I'M <span>MICHAEL MEKHA </span>, A FULL-STACK WEB DEVELOPER</h1>
+        <p>
+            Here’s a paragraph that describes you as a full-stack web developer:
+
+            I am a passionate and skilled full-stack web developer with expertise in building modern, responsive, and
+            user-friendly web applications. My technical stack includes HTML, CSS, and Bootstrap for crafting visually
+            appealing and responsive front-end interfaces. I also specialize in JavaScript and Node.js for creating
+            dynamic and efficient back-end functionality, ensuring seamless integration between client and server.
+            Additionally, I have experience with MongoDB, allowing me to design and manage scalable databases that
+            support data-intensive applications. I take pride in delivering high-quality projects, meeting client
+            expectations, and continuously enhancing my skills to stay updated with the latest web development
+            technologies..</p>
+        <button class="btn" onclick="showPopup()">see CV</button>
+        <div class="popup-container" id="popupContainer">
+            <div class="popup-content">
+                <button class="close-btn" onclick="closePopup()">×</button>
+                <img src="images/cv.png" alt="CV Image">
+            </div>
+        </div>
+        <div class="contact">
+            <a id="contact-whatsapp" class=" scale-in-center" target="_blank" href="https://wa.me/+201275078244">
+                <i class="fab fa-whatsapp icn" style="color: #25D366;"></i>
+            </a>
+            <a id="contact-whatsapp" class=" scale-in-center" target="_blank" href="https://www.facebook.com/michaelmekha.come.1/">
+                <i class="fa-brands fa-square-facebook icn" style="color:rgb(24, 119, 242) ;"></i>
+                </a>
+            <a id="contact-whatsapp" class=" scale-in-center" target="_blank" href="https://www.instagram.com/michael_me5a/profilecard/?igsh=MTd0MTM4emo1b2RrMA==">
+                <i class="fa-brands fa-instagram icn" style="background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
+                background-clip: text; 
+                color: transparent;"></i>
+                </a>
+            <a id="contact-whatsapp" class=" scale-in-center" target="_blank" href="https://www.linkedin.com/in/michael-m-328a36205/">
+                <i class="fa-brands fa-linkedin icn" style="color: #0077B5;"></i>
+                </a>
+            <a id="contact-whatsapp" class=" scale-in-center" target="_blank" href="tel:+201275078244">
+                <i class="fa-solid fa-phone icn" style=" background: linear-gradient(135deg, #1E88E5, #42A5F5); /* Gradient blue for a modern look */
+                background-clip: text; /* استخدام التدرج في النص */
+                color: transparent;"></i>
+                </a>
+         </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <img src="images/html-5.png" alt="HTML">
+        <img src="images/css3.png" alt="CSS">
+        <img src="images/javascript.png" alt="JavaScript">
+        <img src="images/react-native.png" alt="React">
+        <img src="images/bootstrap.png" alt="Bootstrap">
+        <img src="images/Node_js Logo .jpg" alt="Node.js">
+        <img src="images/mongo.png" alt="mongodb">
+    </section>
+
+    <section class="services" id="services">
+        <a href="https://costa-blanca.github.io/COSTA-BLANCA.com/index.html" target="_blank" >
+            <div class="card">
+                <img src="images/1.png" alt="costa blanca website" width="200px" height="300px" style="border-radius: 5px 20px;">
+                <h3>COSTA BLANCA WEBSITE</h3>
+                <!-- <p>Lorem Ipsum is Simply Dummy Text Of The Printing And Typesetting Industry.</p> -->
+            </div>
+        </a>
+        <a href="https://hhanklogy.github.io/HANCOLOGY.COM/index.html" target="_blank" >
+            <div class="card">
+                <img src="images/2.png" alt="costa blanca website" width="200px" height="300px"style="border-radius: 5px 20px;">
+                <h3>HANKOLOGY WEBSITE</h3>
+                <!-- <p>Lorem Ipsum is Simply Dummy Text Of The Printing And Typesetting Industry.</p> -->
+            </div>
+        </a>
+        <a href="https://mekhamichael.github.io/coffeeshop-66/" target="_blank" >
+            <div class="card">
+                <img src="images/3.jpg" alt="costa blanca website" width="200px" height="300px"style="border-radius: 5px 20px;">
+                <h3>COFFEESHOP 66 WEBSITE</h3>
+                <!-- <p>Lorem Ipsum is Simply Dummy Text Of The Printing And Typesetting Industry.</p> -->
+            </div>
+        </a>
+       <h2>Don't forget that I can make any design you want, and also don't forget to ask about new designs.😉😉🤙🏼🤙🏼</h2>
+    </section>
+
+    <footer>
+        &copy; 2024 All rights reserved.
+    </footer>
+    <script>
+        // Function to show the popup
+        function showPopup() {
+            const popupContainer = document.getElementById('popupContainer');
+            popupContainer.style.display = 'flex';
+        }
+
+        // Function to close the popup
+        function closePopup() {
+            const popupContainer = document.getElementById('popupContainer');
+            popupContainer.style.display = 'none';
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"
+        integrity="sha512-icYxU5cNhQdPz6Seij7skG06NcDw8/2z6Q7FpzzhKIDWrO24cNauJLFsCS9hAIKnkO93kTBrGGHU03ArpxZfiw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>
