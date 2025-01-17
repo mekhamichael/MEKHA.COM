@@ -11,15 +11,6 @@ body {
     overflow-x: hidden;
     overflow: auto;
 }
-img {
-    transition: transform 0.3s ease-in-out;
-    cursor: pointer;
-}
-
-.zoomed {
-    transform: scale(2);
-    transition: transform 0.3s ease-in-out;
-}
 
 .logo{
     float: left;
@@ -156,7 +147,7 @@ img {
 .services {
     padding: 50px 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
 }
 .services a{
@@ -167,14 +158,14 @@ img {
 }
 .services .card {
     background: #161b22;
-    padding: 20px;
-    width: 80%;
+    padding: 10px;
     text-align: center;
     border-radius: 10px;
-    margin-left: 50px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
-
+.card img{
+    
+}
 .services .card h3 {
     margin-bottom: 15px;
     color: #f9826c;
