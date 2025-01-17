@@ -25,13 +25,14 @@
 
 
     <section class="hero" id="home">
-        <img src="images/icn.jpeg" alt="" width="50px" height="50px"  class="logo">
+        <img src="images/icn.jpeg" alt="" width="50px" height="50px"  class="logo zoomable-image">
         <h1 style="text-align: right;">MEKHA <span>DEV</span></h1> <br>
         <div class="image">
-            <img src="images/me.jpg" alt="Michael Mekha Image">
+            <img src="images/me.jpg" alt="Michael Mekha Image" class="zoomable-image">
         </div>
         <h1>I'M <span>MICHAEL MEKHA </span>, A FULL-STACK WEB DEVELOPER</h1>
         <p>
+            Here’s a paragraph that describes you as a full-stack web developer:
 
             I am a passionate and skilled full-stack web developer with expertise in building modern, responsive, and
             user-friendly web applications. My technical stack includes HTML, CSS, and Bootstrap for crafting visually
@@ -45,7 +46,7 @@
         <div class="popup-container" id="popupContainer">
             <div class="popup-content">
                 <button class="close-btn" onclick="closePopup()">×</button>
-                <img src="images/cv.png" alt="CV Image">
+                <img src="images/cv.png" alt="CV Image" class="zoomable-image">
             </div>
         </div>
         <div class="contact">
@@ -72,39 +73,39 @@
     </section>
 
     <section class="skills" id="skills">
-        <img src="images/html-5.png" alt="HTML">
-        <img src="images/css3.png" alt="CSS">
-        <img src="images/javascript.png" alt="JavaScript">
-        <img src="images/react-native.png" alt="React">
-        <img src="images/bootstrap.png" alt="Bootstrap">
-        <img src="images/Node_js Logo .jpg" alt="Node.js">
-        <img src="images/mongo.png" alt="mongodb">
+        <img src="images/html-5.png" alt="HTML" class="zoomable-image">
+        <img src="images/css3.png" alt="CSS"class="zoomable-image">
+        <img src="images/javascript.png" alt="JavaScript"class="zoomable-image">
+        <img src="images/react-native.png" alt="React"class="zoomable-image">
+        <img src="images/bootstrap.png" alt="Bootstrap"class="zoomable-image">
+        <img src="images/Node_js Logo .jpg" alt="Node.js"class="zoomable-image">
+        <img src="images/mongo.png" alt="mongodb"class="zoomable-image">
     </section>
 
     <section class="services" id="services">
         <a href="https://costa-blanca.github.io/COSTA-BLANCA.com/index.html" target="_blank" >
             <div class="card">
-                <img src="images/1.png" alt="costa blanca website" width="200px" height="300px" style="border-radius: 5px 20px;">
+                <img src="images/1.png" alt="costa blanca website"class="zoomable-image" width="250px" height="350px" style="border-radius: 5px 20px;">
                 <h3>COSTA BLANCA WEBSITE</h3>
                 <!-- <p>Lorem Ipsum is Simply Dummy Text Of The Printing And Typesetting Industry.</p> -->
             </div>
         </a>
         <a href="https://hhanklogy.github.io/HANCOLOGY.COM/index.html" target="_blank" >
             <div class="card">
-                <img src="images/2.png" alt="costa blanca website" width="200px" height="300px"style="border-radius: 5px 20px;">
+                <img src="images/2.png" alt="costa blanca website"class="zoomable-image" width="250px" height="350px"style="border-radius: 5px 20px;">
                 <h3>HANKOLOGY WEBSITE</h3>
                 <!-- <p>Lorem Ipsum is Simply Dummy Text Of The Printing And Typesetting Industry.</p> -->
             </div>
         </a>
         <a href="https://mekhamichael.github.io/coffeeshop-66/" target="_blank" >
             <div class="card">
-                <img src="images/3.jpg" alt="costa blanca website" width="200px" height="300px"style="border-radius: 5px 20px;">
+                <img src="images/3.jpg" alt="costa blanca website"class="zoomable-image" width="250px" height="350px"style="border-radius: 5px 20px;">
                 <h3>COFFEESHOP 66 WEBSITE</h3>
                 <!-- <p>Lorem Ipsum is Simply Dummy Text Of The Printing And Typesetting Industry.</p> -->
-            </div>
+            </div> <br>
         </a>
-       <h2>Don't forget that I can make any design you want, and also don't forget to ask about new designs.😉😉🤙🏼🤙🏼</h2>
     </section>
+    <h2 style="margin: -10px  20px 10px ;">Don't forget that I can make any design you want, and also don't forget to ask about new designs.😉😉🤙🏼🤙🏼</h2>
 
     <footer>
         &copy; 2024 All rights reserved.
@@ -121,14 +122,41 @@
             const popupContainer = document.getElementById('popupContainer');
             popupContainer.style.display = 'none';
         }
-            document.querySelectorAll('img').forEach(img => {
-    img.setAttribute('draggable', 'false');
-})
-    </script>
 
+        if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("/js/sw.js") // يجب أن يكون sw.js في الجذر
+      .then((registration) => {
+        console.log("Service Worker registered with scope:", registration.scope);
+      })
+      .catch((error) => {
+        console.error("Service Worker registration failed:", error);
+      });
+  });
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    // استهداف جميع الصور في الموقع
+    const images = document.querySelectorAll('img');
+
+    images.forEach(image => {
+        image.addEventListener('touchstart', function () {
+            image.classList.add('zoomed'); // أضف كلاس التكبير
+        });
+
+        image.addEventListener('touchend', function () {
+            image.classList.remove('zoomed'); // أزل كلاس التكبير
+        });
+    });
+});
+
+
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"
         integrity="sha512-icYxU5cNhQdPz6Seij7skG06NcDw8/2z6Q7FpzzhKIDWrO24cNauJLFsCS9hAIKnkO93kTBrGGHU03ArpxZfiw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="js/sw.js"></script>
 </body>
 
 </html>

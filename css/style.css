@@ -11,6 +11,16 @@ body {
     overflow-x: hidden;
     overflow: auto;
 }
+img {
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.zoomed {
+    transform: scale(2);
+    transition: transform 0.3s ease-in-out;
+}
+
 .logo{
     float: left;
     margin: 10px;
@@ -146,18 +156,22 @@ body {
 .services {
     padding: 50px 20px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
 }
 .services a{
     text-decoration: none;
     color: #ffffff;
+    /* margin: auto; */
+
 }
 .services .card {
     background: #161b22;
     padding: 20px;
+    width: 80%;
     text-align: center;
     border-radius: 10px;
+    margin-left: 50px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
