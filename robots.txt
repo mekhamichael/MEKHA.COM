@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mekhamichael.github.io/MEKHA.COM/sitemap.xml
