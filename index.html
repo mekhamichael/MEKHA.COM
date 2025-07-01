@@ -76,8 +76,8 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.png" alt=""  >
-        <h1 class="sitename" style="font-size: 20px;" >MICHAEL <span style="color: tomato;">MEKHA </span></h1>
+        <img src="assets/img/logo.png" alt="">
+        <h1 class="sitename" style="font-size: 20px;">MICHAEL <span style="color: tomato;">MEKHA </span></h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -94,7 +94,8 @@
                     class="bi bi-chevron-down toggle-dropdown"></i></a>
                 <ul>
                   <li><a href="https://mekhamichael.github.io/coffeeshop-66/" target="_blank">Coffeeshop 66</a></li>
-                  <li><a href="https://costa-blanca.github.io/COSTA-BLANCA.com/index.html" target="_blank">Costa Blanca</a></li>
+                  <li><a href="https://costa-blanca.github.io/COSTA-BLANCA.com/index.html" target="_blank">Costa
+                      Blanca</a></li>
                   <li><a href="https://hhanklogy.github.io/HANCOLOGY.COM/index.html" target="_blank">Hancology</a></li>
                   <li><a href="https://linguine-com.github.io/LINGUINE.COM/" target="_blank">linguine</a></li>
                 </ul>
@@ -121,13 +122,14 @@
 
       <div class="container d-flex flex-column align-items-center justify-content-center text-center" data-aos="fade-up"
         data-aos-delay="100">
-        <h2 style="text-shadow: 1px 1px 50px rgb(248, 180, 180);">I am <span style="color: chocolate;">Michael Mekha Maximus</span></h2>
+        <h2 style="text-shadow: 1px 1px 50px rgb(248, 180, 180);">I am <span style="color: chocolate;">Michael Mekha
+            Maximus</span></h2>
         <p><span class="typed" data-typed-items="full stack, Developer, frontend, Backend"></span></p>
       </div>
 
     </section><!-- /Hero Section -->
 
-<!-- /////////////////////////////////////////////////////////////////////////// -->
+    <!-- /////////////////////////////////////////////////////////////////////////// -->
 
     <!-- About Section -->
     <section id="about" class="about section">
@@ -244,84 +246,85 @@
 
     </section><!-- /About Section -->
 
-<!-- ////////////////////////////////////////////////////////////////////////// -->
+    <!-- ////////////////////////////////////////////////////////////////////////// -->
 
     <!-- Resume Section -->
     <section id="resume" class="resume section">
 
       <!-- Section Title -->
       <style>
-  @keyframes fadeSlideIn {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
+        @keyframes fadeSlideIn {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
 
-  .pdf-animate {
-    animation: fadeSlideIn 0.8s ease forwards;
-  }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
 
-  .btn {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 16px;
-    margin-right: 10px;
-  }
+        .pdf-animate {
+          animation: fadeSlideIn 0.8s ease forwards;
+        }
 
-  .btn-success {
-    background-color: #28a745;
-    color: white;
-    transition: 0.8s;
-  }
+        .btn {
+          padding: 10px 20px;
+          border: none;
+          border-radius: 6px;
+          cursor: pointer;
+          font-size: 16px;
+          margin-right: 10px;
+        }
 
-  .btn-secondary {
-    background-color: #6c757d;
-    color: white;
-  }
-</style>
+        .btn-success {
+          background-color: #28a745;
+          color: white;
+          transition: 0.8s;
+        }
 
-<div class="container section-title" data-aos="fade-up">
-  <h2>Resume</h2>
-  <p>Check out my CV to learn more about my expertise, professional journey, and achievements</p>
+        .btn-secondary {
+          background-color: #6c757d;
+          color: white;
+        }
+      </style>
 
-  <!-- أزرار العرض والتحميل -->
-  <div style="margin-top: 15px;">
-    <button onclick="togglePdf()" id="toggleBtn" class="btn btn-success">  SHOW CV</button>
-    <a href="michael.pdf" download class="btn btn-secondary">DOWNLOAD</a>
-  </div>
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Resume</h2>
+        <p>Check out my CV to learn more about my expertise, professional journey, and achievements</p>
 
-  <!-- عرض ملف PDF -->
-  <div id="pdf-viewer" style="display: none; margin-top: 20px;">
-    <iframe src="michael.pdf" width="100%" height="600px"   style="border: 1px solid #ccc;"></iframe>
-  </div>
-</div>
+        <!-- أزرار العرض والتحميل -->
+        <div style="margin-top: 15px;">
+          <button onclick="togglePdf()" id="toggleBtn" class="btn btn-success"> SHOW CV</button>
+          <a href="michael.pdf" download class="btn btn-secondary">DOWNLOAD</a>
+        </div>
 
-<script>
-  function togglePdf() {
-    const viewer = document.getElementById('pdf-viewer');
-    const button = document.getElementById('toggleBtn');
+        <!-- عرض ملف PDF -->
+        <div id="pdf-viewer" style="display: none; margin-top: 20px;">
+          <iframe src="michael.pdf" width="100%" height="600px" style="border: 1px solid #ccc;"></iframe>
+        </div>
+      </div>
 
-    if (viewer.style.display === 'none') {
-      // عرض الملف مع أنيميشن
-      viewer.style.display = 'block';
-      viewer.classList.add('pdf-animate');
-      button.textContent = 'cancel';
-    } else {
-      // إخفاء الملف وإعادة الزر للوضع الأول
-      viewer.style.display = 'none';
-      button.textContent = '  SHOW CV';
-      viewer.classList.remove('pdf-animate');
+      <script>
+        function togglePdf() {
+          const viewer = document.getElementById('pdf-viewer');
+          const button = document.getElementById('toggleBtn');
 
-    }
-  }
-</script>
+          if (viewer.style.display === 'none') {
+            // عرض الملف مع أنيميشن
+            viewer.style.display = 'block';
+            viewer.classList.add('pdf-animate');
+            button.textContent = 'cancel';
+          } else {
+            // إخفاء الملف وإعادة الزر للوضع الأول
+            viewer.style.display = 'none';
+            button.textContent = '  SHOW CV';
+            viewer.classList.remove('pdf-animate');
+
+          }
+        }
+      </script>
 
 
       <div class="container">
@@ -539,14 +542,22 @@
         <div class="isotope-layout" data-default-filter=".filter-66" data-layout="masonry" data-sort="original-order">
 
           <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter=".filter-66" class="filter-active"><img src="assets/img/portfolio/logo-66.png" width="40px" height="40px" alt=""> coffeeshop 66</li>
-            <li data-filter=".filter-cos"><img src="assets/img/portfolio/logo-costa.png" width="40px" height="40px" alt=""> costa blanca</li>
-            <li data-filter=".filter-hank"><img src="assets/img/portfolio/logo-hank.png" width="40px" height="40px" alt=""> hancology</li>
-            <li data-filter=".filter-ling"><img src="assets/img/portfolio/logo-ling.png" width="40px" height="40px" alt=""> linguine</li><br>
-            <li data-filter=".filter-sakhra"><img src="assets/img/portfolio/logo-sakhra.png" width="40px" height="40px" alt=""> ELSAKHRA</li>
-            <li data-filter=".filter-mob"> <img src="assets/img/portfolio/logo-mob.png" width="40px" height="60px" alt=""> mob store</li>
-            <li data-filter=".filter-rock"><img src="assets/img/portfolio/logo-rocker.png" width="40px" height="30px" alt=""> rocker</li>
-            <li data-filter=".filter-lens"><img src="assets/img/portfolio/logo-len.jpg" width="40px" height="30px" alt=""> lensify</li>
+            <li data-filter=".filter-66" class="filter-active"><img src="assets/img/portfolio/logo-66.png" width="40px"
+                height="40px" alt=""> coffeeshop 66</li>
+            <li data-filter=".filter-cos"><img src="assets/img/portfolio/logo-costa.png" width="40px" height="40px"
+                alt=""> costa blanca</li>
+            <li data-filter=".filter-hank"><img src="assets/img/portfolio/logo-hank.png" width="40px" height="40px"
+                alt=""> hancology</li>
+            <li data-filter=".filter-ling"><img src="assets/img/portfolio/logo-ling.png" width="40px" height="40px"
+                alt=""> linguine</li><br>
+            <li data-filter=".filter-sakhra"><img src="assets/img/portfolio/logo-sakhra.png" width="40px" height="40px"
+                alt=""> ELSAKHRA</li>
+            <li data-filter=".filter-mob"> <img src="assets/img/portfolio/logo-mob.png" width="40px" height="60px"
+                alt=""> mob store</li>
+            <li data-filter=".filter-rock"><img src="assets/img/portfolio/logo-rocker.png" width="40px" height="30px"
+                alt=""> rocker</li>
+            <li data-filter=".filter-lens"><img src="assets/img/portfolio/logo-len.jpg" width="40px" height="30px"
+                alt=""> lensify</li>
           </ul><!-- End Portfolio Filters -->
 
           <div class="row gy-12 isotope-container" data-aos="fade-up" data-aos-delay="200">
@@ -578,38 +589,41 @@
                 }
               </script>
 
-                        <div class="swiper-wrapper align-items-center">
+                        <div class="swiper-wrapper ">
                           <style>
-                          .video-container {
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-}
+                            .video-container {
+                              width: 100%;
+                              max-width: 100%;
+                              margin: 0 auto;
+                              border-radius: 12px;
+                              overflow: hidden;
+                              box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+                            }
 
-.video-container video {
-  width: 100%;
-  height: auto;
-  display: block;
-  border: none;
-}
-/* الشاشات الصغيرة (موبايل) */
+                            .video-container video {
+                              width: 100%;
+                              height: auto;
+                              display: block;
+                              border: none;
+                            }
 
+                            /* الشاشات الصغيرة (موبايل) */
                           </style>
                           <div class="swiper-slide">
                             <div class="video-container">
-                              <video autoplay muted loop controls poster="poster.jpg">
+                              <video autoplay muted loop controls poster="poster.jpg" class="vvv">
                                 <source src="assets/img/portfolio/66 pc.mp4" type="video/mp4">
-your browser dosn't support video                              </video>
+                                your browser dosn't support video
+                              </video>
                             </div>
                           </div>
 
                           <div class="swiper-slide mob">
-<video autoplay muted loop controls poster="poster.jpg" width="100%" height="400px">
-                                <source src="assets/img/portfolio/66phone.mp4" type="video/mp4">
-your browser dosn't support video                              </video>                          </div>
+                            <video autoplay muted loop controls poster="poster.jpg" width="100%" height="400px">
+                              <source src="assets/img/portfolio/66phone.mp4" type="video/mp4">
+                              your browser dosn't support video
+                            </video>
+                          </div>
 
 
 
@@ -625,14 +639,15 @@ your browser dosn't support video                              </video>         
                           <li><strong>Category</strong>: Website & digital menu</li>
                           <li><strong>Client</strong>: COFFEESHOP 66</li>
                           <li><strong>Project date</strong>: 01 sep, 2024</li>
-                          <li><strong>Project URL</strong>: <a href="https://mekhamichael.github.io/coffeeshop-66/" target="_blank">www.coffeeshop 66.com</a></li>
+                          <li><strong>Project URL</strong>: <a href="https://mekhamichael.github.io/coffeeshop-66/"
+                              target="_blank">www.coffeeshop 66.com</a></li>
                         </ul>
                       </div>
                       <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
                         <h2>DESCREPTION</h2>
                         <p>
                           COFFEESHOP 66 is a digital menu for a café offering a wide range of food and
-                           drinks — including breakfast, pasta, sandwiches, desserts, 
+                          drinks — including breakfast, pasta, sandwiches, desserts,
                           coffee, juices, and more — all organized by category with clear pricing.
                         </p>
                       </div>
@@ -648,7 +663,7 @@ your browser dosn't support video                              </video>         
             </div><!-- End 66 Item -->
 
             <div class="col-lg-12 col-md-12 portfolio-item isotope-item filter-cos">
-                <!-- Portfolio Details Section -->
+              <!-- Portfolio Details Section -->
               <section id="portfolio-details" class="portfolio-details section">
 
                 <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -676,36 +691,41 @@ your browser dosn't support video                              </video>         
 
                         <div class="swiper-wrapper align-items-center">
                           <style>
-                          .video-container {
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-}
+                            .video-container {
+                              width: 100%;
+                              max-width: 100%;
+                              margin: 0 auto;
+                              border-radius: 12px;
+                              overflow: hidden;
+                              box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+                            }
 
-.video-container video {
-  width: 100%;
-  height: auto;
-  display: block;
-  border: none;
-}
-/* الشاشات الصغيرة (موبايل) */
+                            .video-container video {
+                              width: 100%;
+                              height: auto;
+                              display: block;
+                              border: none;
+                            }
 
+                            /* الشاشات الصغيرة (موبايل) */
                           </style>
                           <div class="swiper-slide">
                             <div class="video-container">
-                              <video autoplay muted loop controls poster="assets/img/portfolio/costa 1.png" width="100%" height="500px">
+                              <video autoplay muted loop controls poster="assets/img/portfolio/costa 1.png" width="100%"
+                                height="500px">
                                 <source src="assets/img/portfolio/costa-pc.mp4" type="video/mp4">
-your browser dosn't support video                              </video>
+                                your browser dosn't support video
+                              </video>
                             </div>
                           </div>
 
                           <div class="swiper-slide mob">
-<video autoplay muted loop controls poster="assets/img/portfolio/costa 3.png" width="100%" height="500px">
-                                <source src="assets/img/portfolio/costa-phone.mp4" type="video/mp4">
-your browser dosn't support video                              </video>                          </div>
+                            <video autoplay muted loop controls poster="assets/img/portfolio/costa 3.png" width="100%"
+                              height="500px">
+                              <source src="assets/img/portfolio/costa-phone.mp4" type="video/mp4">
+                              your browser dosn't support video
+                            </video>
+                          </div>
 
 
 
@@ -721,14 +741,15 @@ your browser dosn't support video                              </video>         
                           <li><strong>Category</strong>: Website & digital menu</li>
                           <li><strong>Client</strong>: costa blanca</li>
                           <li><strong>Project date</strong>: 05 dec, 2024</li>
-                          <li><strong>Project URL</strong>: <a href="https://costa-blanca.github.io/COSTA-BLANCA.com/" target="_blank">www.costa blanca.com</a></li>
+                          <li><strong>Project URL</strong>: <a href="https://costa-blanca.github.io/COSTA-BLANCA.com/"
+                              target="_blank">www.costa blanca.com</a></li>
                         </ul>
                       </div>
                       <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
                         <h2>DESCREPTION</h2>
                         <p>
                           COsta blanca is a digital menu for a resturant offering a wide range of food and
-                           drinks — including breakfast, pasta, sandwiches, desserts, 
+                          drinks — including breakfast, pasta, sandwiches, desserts,
                           coffee, juices, and more — all organized by category with clear pricing.
                         </p>
                       </div>
@@ -742,7 +763,7 @@ your browser dosn't support video                              </video>         
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-12 col-md-12 portfolio-item isotope-item filter-hank">
-                  <!-- Portfolio Details Section -->
+              <!-- Portfolio Details Section -->
               <section id="portfolio-details" class="portfolio-details section">
 
                 <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -770,36 +791,41 @@ your browser dosn't support video                              </video>         
 
                         <div class="swiper-wrapper align-items-center">
                           <style>
-                          .video-container {
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-}
+                            .video-container {
+                              width: 100%;
+                              max-width: 100%;
+                              margin: 0 auto;
+                              border-radius: 12px;
+                              overflow: hidden;
+                              box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+                            }
 
-.video-container video {
-  width: 100%;
-  height: auto;
-  display: block;
-  border: none;
-}
-/* الشاشات الصغيرة (موبايل) */
+                            .video-container video {
+                              width: 100%;
+                              height: auto;
+                              display: block;
+                              border: none;
+                            }
 
+                            /* الشاشات الصغيرة (موبايل) */
                           </style>
                           <div class="swiper-slide">
                             <div class="video-container">
-                              <video autoplay muted loop controls poster="assets/img/portfolio/" width="100%" height="500px">
+                              <video autoplay muted loop controls poster="assets/img/portfolio/" width="100%"
+                                height="500px">
                                 <source src="assets/img/portfolio/hank-pc.mp4" type="video/mp4">
-your browser dosn't support video                              </video>
+                                your browser dosn't support video
+                              </video>
                             </div>
                           </div>
 
                           <div class="swiper-slide mob">
-<video autoplay muted loop controls poster="assets/img/portfolio/hank-phone-poster.jpg" width="100%" height="500px">
-                                <source src="assets/img/portfolio/hank-phone.mp4" type="video/mp4">
-your browser dosn't support video                              </video>                          </div>
+                            <video autoplay muted loop controls poster="assets/img/portfolio/hank-phone-poster.jpg"
+                              width="100%" height="500px">
+                              <source src="assets/img/portfolio/hank-phone.mp4" type="video/mp4">
+                              your browser dosn't support video
+                            </video>
+                          </div>
 
 
 
@@ -815,14 +841,15 @@ your browser dosn't support video                              </video>         
                           <li><strong>Category</strong>: Website & digital menu</li>
                           <li><strong>Client</strong>: hankology</li>
                           <li><strong>Project date</strong>: 05 feb, 2025</li>
-                          <li><strong>Project URL</strong>: <a href="https://hhanklogy.github.io/HANCOLOGY.COM/" target="_blank">www.hankology.com</a></li>
+                          <li><strong>Project URL</strong>: <a href="https://hhanklogy.github.io/HANCOLOGY.COM/"
+                              target="_blank">www.hankology.com</a></li>
                         </ul>
                       </div>
                       <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
                         <h2>DESCREPTION</h2>
                         <p>
                           hankology is a digital menu for a resturant offering a wide range of food and
-                           drinks — including breakfast, pasta, sandwiches, desserts, 
+                          drinks — including breakfast, pasta, sandwiches, desserts,
                           coffee, juices, and more — all organized by category with clear pricing.
                         </p>
                       </div>
@@ -863,36 +890,41 @@ your browser dosn't support video                              </video>         
 
                         <div class="swiper-wrapper align-items-center">
                           <style>
-                          .video-container {
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-}
+                            .video-container {
+                              width: 100%;
+                              max-width: 100%;
+                              margin: 0 auto;
+                              border-radius: 12px;
+                              overflow: hidden;
+                              box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+                            }
 
-.video-container video {
-  width: 100%;
-  height: auto;
-  display: block;
-  border: none;
-}
-/* الشاشات الصغيرة (موبايل) */
+                            .video-container video {
+                              width: 100%;
+                              height: auto;
+                              display: block;
+                              border: none;
+                            }
 
+                            /* الشاشات الصغيرة (موبايل) */
                           </style>
                           <div class="swiper-slide">
                             <div class="video-container">
-                              <video autoplay muted loop controls poster="assets/img/portfolio/ling 1.png" width="100%" height="500px">
+                              <video autoplay muted loop controls poster="assets/img/portfolio/ling 1.png" width="100%"
+                                height="500px">
                                 <source src="assets/img/portfolio/ling-pc.mp4" type="video/mp4">
-your browser dosn't support video                              </video>
+                                your browser dosn't support video
+                              </video>
                             </div>
                           </div>
 
                           <div class="swiper-slide mob">
-<video autoplay muted loop controls poster="assets/img/portfolio/ling 1.png" width="100%" height="500px">
-                                <source src="assets/img/portfolio/ling-phone.mp4" type="video/mp4">
-your browser dosn't support video                              </video>                          </div>
+                            <video autoplay muted loop controls poster="assets/img/portfolio/ling 1.png" width="100%"
+                              height="500px">
+                              <source src="assets/img/portfolio/ling-phone.mp4" type="video/mp4">
+                              your browser dosn't support video
+                            </video>
+                          </div>
 
 
 
@@ -908,14 +940,15 @@ your browser dosn't support video                              </video>         
                           <li><strong>Category</strong>: Website & digital menu</li>
                           <li><strong>Client</strong>: linguine</li>
                           <li><strong>Project date</strong>: 05 mar, 2025</li>
-                          <li><strong>Project URL</strong>: <a href="https://linguine-com.github.io/LINGUINE.COM/" target="_blank">www.linguine.com</a></li>
+                          <li><strong>Project URL</strong>: <a href="https://linguine-com.github.io/LINGUINE.COM/"
+                              target="_blank">www.linguine.com</a></li>
                         </ul>
                       </div>
                       <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
                         <h2>DESCREPTION</h2>
                         <p>
                           linguine is a digital menu for a resturant offering a wide range of food and
-                           drinks — including breakfast, pasta, sandwiches, desserts, 
+                          drinks — including breakfast, pasta, sandwiches, desserts,
                           coffee, juices, and more — all organized by category with clear pricing.
                         </p>
                       </div>
@@ -956,36 +989,41 @@ your browser dosn't support video                              </video>         
 
                         <div class="swiper-wrapper align-items-center">
                           <style>
-                          .video-container {
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-}
+                            .video-container {
+                              width: 100%;
+                              max-width: 100%;
+                              margin: 0 auto;
+                              border-radius: 12px;
+                              overflow: hidden;
+                              box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+                            }
 
-.video-container video {
-  width: 100%;
-  height: auto;
-  display: block;
-  border: none;
-}
-/* الشاشات الصغيرة (موبايل) */
+                            .video-container video {
+                              width: 100%;
+                              height: auto;
+                              display: block;
+                              border: none;
+                            }
 
+                            /* الشاشات الصغيرة (موبايل) */
                           </style>
                           <div class="swiper-slide">
                             <div class="video-container">
-                              <video autoplay muted loop controls poster="assets/img/portfolio/" width="100%" height="500px">
+                              <video autoplay muted loop controls poster="assets/img/portfolio/" width="100%"
+                                height="500px">
                                 <source src="assets/img/portfolio/elsakhra-pc.mp4" type="video/mp4">
-your browser dosn't support video                              </video>
+                                your browser dosn't support video
+                              </video>
                             </div>
                           </div>
 
                           <div class="swiper-slide mob">
-<video autoplay muted loop controls poster="assets/img/portfolio/" width="100%" height="500px">
-                                <source src="assets/img/portfolio/elsakhra-phone.mp4" type="video/mp4">
-your browser dosn't support video                              </video>                          </div>
+                            <video autoplay muted loop controls poster="assets/img/portfolio/" width="100%"
+                              height="500px">
+                              <source src="assets/img/portfolio/elsakhra-phone.mp4" type="video/mp4">
+                              your browser dosn't support video
+                            </video>
+                          </div>
 
 
 
@@ -1001,17 +1039,22 @@ your browser dosn't support video                              </video>         
                           <li><strong>Category</strong>: Website </li>
                           <li style="font-size: 14px;"><strong>Client</strong>: ELSAKHRA FOR HEAVY MACHINERY</li>
                           <li><strong>Project date</strong>: 20 may, 2025</li>
-                          <li><strong>Project URL</strong>: <a href="https://www.elsakhra.co/" target="_blank">www.elsakhra.co</a></li>
+                          <li><strong>Project URL</strong>: <a href="https://www.elsakhra.co/"
+                              target="_blank">www.elsakhra.co</a></li>
                         </ul>
                       </div>
                       <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
                         <h2>DESCREPTION</h2>
                         <p>
-                          Elsakhra for Heavy Machinery is a trusted Egyptian company established in 1985, specializing in the sale,
-                           rental, and maintenance of heavy equipment. They offer a wide range of machinery, genuine spare parts from
-                            global brands, and expert repair services including crushers, gearboxes, metal fabrication, and hydraulic
-                             systems. With decades of experience and a fully equipped facility, Elsakhra is a reliable partner for 
-                             construction and industrial equipment solutions.
+                          Elsakhra for Heavy Machinery is a trusted Egyptian company established in 1985, specializing
+                          in the sale,
+                          rental, and maintenance of heavy equipment. They offer a wide range of machinery, genuine
+                          spare parts from
+                          global brands, and expert repair services including crushers, gearboxes, metal fabrication,
+                          and hydraulic
+                          systems. With decades of experience and a fully equipped facility, Elsakhra is a reliable
+                          partner for
+                          construction and industrial equipment solutions.
                         </p>
                       </div>
                     </div>
@@ -1024,7 +1067,7 @@ your browser dosn't support video                              </video>         
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-12 col-md-12 portfolio-item isotope-item filter-mob">
-               <section id="portfolio-details" class="portfolio-details section">
+              <section id="portfolio-details" class="portfolio-details section">
 
                 <div class="container" data-aos="fade-up" data-aos-delay="100">
 
@@ -1051,29 +1094,31 @@ your browser dosn't support video                              </video>         
 
                         <div class="swiper-wrapper align-items-center">
                           <style>
-                          .video-container {
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-}
+                            .video-container {
+                              width: 100%;
+                              max-width: 100%;
+                              margin: 0 auto;
+                              border-radius: 12px;
+                              overflow: hidden;
+                              box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+                            }
 
-.video-container video {
-  width: 100%;
-  height: auto;
-  display: block;
-  border: none;
-}
-/* الشاشات الصغيرة (موبايل) */
+                            .video-container video {
+                              width: 100%;
+                              height: auto;
+                              display: block;
+                              border: none;
+                            }
 
+                            /* الشاشات الصغيرة (موبايل) */
                           </style>
                           <div class="swiper-slide">
                             <div class="video-container">
-                              <video autoplay muted loop controls poster="assets/img/portfolio/" width="100%" height="500px">
+                              <video autoplay muted loop controls poster="assets/img/portfolio/" width="100%"
+                                height="500px">
                                 <source src="assets/img/portfolio/mob.mp4" type="video/mp4">
-your browser dosn't support video                              </video>
+                                your browser dosn't support video
+                              </video>
                             </div>
                           </div>
 
@@ -1089,14 +1134,15 @@ your browser dosn't support video                              </video>
                           <li><strong>Category</strong>: Website </li>
                           <li style="font-size: 14px;"><strong>Client</strong>: mobstore</li>
                           <li><strong>Project date</strong>: 20 mar, 2024</li>
-                          <li><strong>Project URL</strong>: <a href="https://mekhamichael.github.io/mob-store-html_css/" target="_blank">www.mobstore.com</a></li>
+                          <li><strong>Project URL</strong>: <a href="https://mekhamichael.github.io/mob-store-html_css/"
+                              target="_blank">www.mobstore.com</a></li>
                         </ul>
                       </div>
                       <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
                         <h2>DESCREPTION</h2>
                         <p>
-                         MOB Store is a mobile-friendly e-commerce template built with pure HTML and CSS. 
-                         It features a clean design, smooth layout, and organized product display—perfect for
+                          MOB Store is a mobile-friendly e-commerce template built with pure HTML and CSS.
+                          It features a clean design, smooth layout, and organized product display—perfect for
                           showcasing front-end skills without using JavaScript.
                         </p>
                       </div>
@@ -1110,7 +1156,7 @@ your browser dosn't support video                              </video>
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-12 col-md-12 portfolio-item isotope-item filter-rock">
-               <section id="portfolio-details" class="portfolio-details section">
+              <section id="portfolio-details" class="portfolio-details section">
 
                 <div class="container" data-aos="fade-up" data-aos-delay="100">
 
@@ -1137,29 +1183,31 @@ your browser dosn't support video                              </video>
 
                         <div class="swiper-wrapper align-items-center">
                           <style>
-                          .video-container {
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-}
+                            .video-container {
+                              width: 100%;
+                              max-width: 100%;
+                              margin: 0 auto;
+                              border-radius: 12px;
+                              overflow: hidden;
+                              box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+                            }
 
-.video-container video {
-  width: 100%;
-  height: auto;
-  display: block;
-  border: none;
-}
-/* الشاشات الصغيرة (موبايل) */
+                            .video-container video {
+                              width: 100%;
+                              height: auto;
+                              display: block;
+                              border: none;
+                            }
 
+                            /* الشاشات الصغيرة (موبايل) */
                           </style>
                           <div class="swiper-slide">
                             <div class="video-container">
-                              <video autoplay muted loop controls poster="assets/img/portfolio/" width="100%" height="500px">
+                              <video autoplay muted loop controls poster="assets/img/portfolio/" width="100%"
+                                height="500px">
                                 <source src="assets/img/portfolio/rocker.mp4" type="video/mp4">
-your browser dosn't support video                              </video>
+                                your browser dosn't support video
+                              </video>
                             </div>
                           </div>
 
@@ -1175,15 +1223,17 @@ your browser dosn't support video                              </video>
                           <li><strong>Category</strong>: Website </li>
                           <li style="font-size: 14px;"><strong>Client</strong>: rocker</li>
                           <li><strong>Project date</strong>: 20 jun, 2024</li>
-                          <li><strong>Project URL</strong>: <a href="https://mekhamichael.github.io/Rocker/" target="_blank">www.rocker.com</a></li>
+                          <li><strong>Project URL</strong>: <a href="https://mekhamichael.github.io/Rocker/"
+                              target="_blank">www.rocker.com</a></li>
                         </ul>
                       </div>
                       <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
                         <h2>DESCREPTION</h2>
                         <p>
-                        
-Rocker is a modern furniture store website built with HTML and CSS. It features a sleek, responsive design with product
- showcases, categories, and pricing—perfect for presenting and selling home furniture online.
+
+                          Rocker is a modern furniture store website built with HTML and CSS. It features a sleek,
+                          responsive design with product
+                          showcases, categories, and pricing—perfect for presenting and selling home furniture online.
                         </p>
                       </div>
                     </div>
@@ -1195,8 +1245,8 @@ Rocker is a modern furniture store website built with HTML and CSS. It features 
               </section><!-- /Portfolio Details Section -->
             </div><!-- End Portfolio Item -->
 
-             <div class="col-lg-12 col-md-12 portfolio-item isotope-item filter-lens">
-               <section id="portfolio-details" class="portfolio-details section">
+            <div class="col-lg-12 col-md-12 portfolio-item isotope-item filter-lens">
+              <section id="portfolio-details" class="portfolio-details section">
 
                 <div class="container" data-aos="fade-up" data-aos-delay="100">
 
@@ -1223,36 +1273,41 @@ Rocker is a modern furniture store website built with HTML and CSS. It features 
 
                         <div class="swiper-wrapper align-items-center">
                           <style>
-                          .video-container {
-  width: 100%;
-  max-width: 100%;
-  margin: 0 auto;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-}
+                            .video-container {
+                              width: 100%;
+                              max-width: 100%;
+                              margin: 0 auto;
+                              border-radius: 12px;
+                              overflow: hidden;
+                              box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+                            }
 
-.video-container video {
-  width: 100%;
-  height: auto;
-  display: block;
-  border: none;
-}
-/* الشاشات الصغيرة (موبايل) */
+                            .video-container video {
+                              width: 100%;
+                              height: auto;
+                              display: block;
+                              border: none;
+                            }
 
+                            /* الشاشات الصغيرة (موبايل) */
                           </style>
                           <div class="swiper-slide">
                             <div class="video-container">
-                              <video autoplay muted loop controls poster="assets/img/portfolio/ling 1.png" width="100%" height="500px">
+                              <video autoplay muted loop controls poster="assets/img/portfolio/ling 1.png" width="100%"
+                                height="500px">
                                 <source src="assets/img/portfolio/len-pc.mp4" type="video/mp4">
-your browser dosn't support video                              </video>
+                                your browser dosn't support video
+                              </video>
                             </div>
                           </div>
 
                           <div class="swiper-slide mob">
-<video autoplay muted loop controls poster="assets/img/portfolio/" width="100%" height="500px">
-                                <source src="assets/img/portfolio/" type="video/mp4">
-your browser dosn't support video                              </video>                          </div>
+                            <video autoplay muted loop controls poster="assets/img/portfolio/" width="100%"
+                              height="500px">
+                              <source src="assets/img/portfolio/" type="video/mp4">
+                              your browser dosn't support video
+                            </video>
+                          </div>
 
 
 
@@ -1268,15 +1323,18 @@ your browser dosn't support video                              </video>         
                           <li><strong>Category</strong>: Website </li>
                           <li style="font-size: 14px;"><strong>Client</strong>: lensify</li>
                           <li><strong>Project date</strong>: 20 jul, 2024</li>
-                          <li><strong>Project URL</strong>: <a href="https://mekhamichael.github.io/Lensify/" target="_blank">www.lensify.com</a></li>
+                          <li><strong>Project URL</strong>: <a href="https://mekhamichael.github.io/Lensify/"
+                              target="_blank">www.lensify.com</a></li>
                         </ul>
                       </div>
                       <div class="portfolio-description" data-aos="fade-up" data-aos-delay="300">
                         <h2>DESCREPTION</h2>
                         <p>
-                      
-Lensify is a modern camera store website built with HTML and CSS. It features a clean, responsive layout with product listings,
- prices, and detailed descriptions—ideal for showcasing and selling cameras and photography gear online.
+
+                          Lensify is a modern camera store website built with HTML and CSS. It features a clean,
+                          responsive layout with product listings,
+                          prices, and detailed descriptions—ideal for showcasing and selling cameras and photography
+                          gear online.
                         </p>
                       </div>
                     </div>
@@ -1300,10 +1358,10 @@ Lensify is a modern camera store website built with HTML and CSS. It features a 
 
 
     <!-- Contact Section -->
-    <section id="contact" class="contact section" >
+    <section id="contact" class="contact section">
 
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up" data-aos-delay="100" >
+      <div class="container section-title" data-aos="fade-up" data-aos-delay="100">
         <h2>Contact</h2>
         <p>Here are all the ways to contact me.</p>
       </div><!-- End Section Title -->
@@ -1415,51 +1473,13 @@ Lensify is a modern camera store website built with HTML and CSS. It features a 
 
   <!-- Preloader -->
   <div id="preloader">
-    <!-- From Uiverse.io by Ashon-G -->
-    <div class="container-loader">
-      <div class="macbook">
-        <div class="macbook__topBord">
-          <div class="macbook__display">
-            <div class="macbook__load"></div>
-          </div>
-        </div>
-        <div class="macbook__underBord">
-          <div class="macbook__keybord">
-            <div class="keybord">
-              <div class="keybord__touchbar"></div>
-              <ul class="keybord__keyBox">
-                <li class="keybord__key key--01"></li>
-                <li class="keybord__key key--02"></li>
-                <li class="keybord__key key--03"></li>
-                <li class="keybord__key key--04"></li>
-                <li class="keybord__key key--05"></li>
-                <li class="keybord__key key--06"></li>
-                <li class="keybord__key key--07"></li>
-                <li class="keybord__key key--08"></li>
-                <li class="keybord__key key--09"></li>
-                <li class="keybord__key key--10"></li>
-                <li class="keybord__key key--11"></li>
-                <li class="keybord__key key--12"></li>
-                <li class="keybord__key key--13"></li>
-              </ul>
-              <ul class="keybord__keyBox--under">
-                <li class="keybord__key key--14"></li>
-                <li class="keybord__key key--15"></li>
-                <li class="keybord__key key--16"></li>
-                <li class="keybord__key key--17"></li>
-                <li class="keybord__key key--18"></li>
-                <li class="keybord__key key--19"></li>
-                <li class="keybord__key key--20"></li>
-                <li class="keybord__key key--21"></li>
-                <li class="keybord__key key--22"></li>
-                <li class="keybord__key key--23"></li>
-                <li class="keybord__key key--24"></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<!-- From Uiverse.io by catraco --> 
+<div class="loader">
+  <span></span>
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
 
   </div>
 
