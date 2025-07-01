@@ -214,7 +214,7 @@ height: 40px;
     transition: 0.3s;
     border-radius: 4px;
     z-index: 99;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.4);
   }
 
   .navmenu .dropdown ul li {
@@ -246,14 +246,14 @@ height: 40px;
 
   .navmenu .dropdown .dropdown ul {
     top: 0;
-    left: -90%;
+    left: -110%;
     visibility: hidden;
   }
 
   .navmenu .dropdown .dropdown:hover>ul {
     opacity: 1;
     top: 0;
-    left: -100%;
+    left: -75%;
     visibility: visible;
   }
 }
