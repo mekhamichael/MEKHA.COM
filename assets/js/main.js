@@ -1,11 +1,3 @@
-/**
-* Template Name: DevFolio
-* Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
-* Updated: Aug 07 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 (function() {
   "use strict";
 
@@ -227,73 +219,100 @@
   });
 
   /**
-   * Navmenu Scrollspy
+   * Navmenu Scrollspy - إصلاح الروابط
    */
-  let navmenulinks = document.querySelectorAll('.navmenu a');
-
-  function navmenuScrollspy() {
-    navmenulinks.forEach(navmenulink => {
-      if (!navmenulink.hash) return;
-      let section = document.querySelector(navmenulink.hash);
-      if (!section) return;
-      let position = window.scrollY + 200;
-      if (position >= section.offsetTop && position <= (section.offsetTop + section.offsetHeight)) {
-        document.querySelectorAll('.navmenu a.active').forEach(link => link.classList.remove('active'));
-        navmenulink.classList.add('active');
-      } else {
-        navmenulink.classList.remove('active');
-      }
-    })
-  }
-  window.addEventListener('load', navmenuScrollspy);
-  document.addEventListener('scroll', navmenuScrollspy);
-
-})();
-
-  // ///////////////////////////////////////////////////  target blanck ////////////////////////////////////
-
-  
-  document.querySelectorAll('a[href]').forEach(function(link) {
-    if (!link.href.startsWith(window.location.origin)) {
-        link.setAttribute('target', '_blank');
-        link.setAttribute('rel', 'noopener noreferrer');
-    }
-});
-
-
-document.addEventListener("DOMContentLoaded", function () {
-  // ✅ منع النقر بزر الفأرة الأيمن
-  document.addEventListener("contextmenu", function (e) {
-      e.preventDefault();
-  });
-
-  // ✅ منع سحب الصور
-  document.querySelectorAll("img").forEach(img => {
-      img.addEventListener("dragstart", function (e) {
-          e.preventDefault();
+  function initNavLinks() {
+    const navLinks = document.querySelectorAll('.navmenu a[href^="#"]');
+    
+    navLinks.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        
+        if (targetElement) {
+          const headerHeight = document.getElementById('header').offsetHeight;
+          const targetPosition = targetElement.offsetTop - headerHeight;
+          
+          window.scrollTo({
+            top: targetPosition,
+            behavior: 'smooth'
+          });
+          
+          // تحديث الروابط النشطة
+          navLinks.forEach(navLink => navLink.classList.remove('active'));
+          this.classList.add('active');
+          
+          // إغلاق القائمة المتنقلة إذا كانت مفتوحة
+          if (document.querySelector('.mobile-nav-active')) {
+            mobileNavToogle();
+          }
+        }
       });
-  });
+    });
+    
+    // تحديث الروابط النشطة أثناء التمرير
+    window.addEventListener('scroll', function() {
+      const sections = document.querySelectorAll('section[id]');
+      const scrollPosition = window.scrollY + 100;
+      
+      let currentSection = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+        const sectionId = section.getAttribute('id');
+        
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+          currentSection = sectionId;
+        }
+      });
+      
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${currentSection}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+  }
 
-  // ✅ تعطيل اختصارات DevTools مثل F12 و Ctrl+Shift+I و Ctrl+U
-  document.addEventListener("keydown", function (e) {
+  // تهيئة الروابط بعد تحميل الصفحة
+  window.addEventListener('load', initNavLinks);
+
+  /**
+   * حماية الموقع
+   */
+  document.addEventListener("DOMContentLoaded", function () {
+    // ✅ منع النقر بزر الفأرة الأيمن
+    document.addEventListener("contextmenu", function (e) {
+      e.preventDefault();
+    });
+
+    // ✅ منع سحب الصور
+    document.querySelectorAll("img").forEach(img => {
+      img.addEventListener("dragstart", function (e) {
+        e.preventDefault();
+      });
+    });
+
+    // ✅ تعطيل اختصارات DevTools
+    document.addEventListener("keydown", function (e) {
       if (e.key === "F12" || 
           (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J")) || 
           (e.ctrlKey && e.key === "U")) {
-          e.preventDefault();
-          alert("🚫 تم تعطيل الاختصارات لحماية الموقع!");
+        e.preventDefault();
       }
+    });
+
+    // ✅ إضافة target="_blank" للروابط الخارجية
+    document.querySelectorAll('a[href]').forEach(function(link) {
+      if (!link.href.startsWith(window.location.origin) && !link.href.startsWith('#')) {
+        link.setAttribute('target', '_blank');
+        link.setAttribute('rel', 'noopener noreferrer');
+      }
+    });
   });
 
-  // ✅ مراقبة فتح DevTools وإخفاء المحتوى أو تعطيله
-  function detectDevTools() {
-      // إذا كان الفرق بين أبعاد نافذة المتصفح و الأبعاد الداخلية أكبر من 200 بكسل (فتح DevTools)
-      if (window.outerWidth - window.innerWidth > 200 || window.outerHeight - window.innerHeight > 200) {
-          document.body.innerHTML = "<h2 style='text-align:center; color:red;'>🚫 تم اكتشاف أدوات المطور!</h2>";
-          setTimeout(() => { window.location.href = "about:blank"; }, 1000); // إعادة التوجيه إلى صفحة فارغة
-      }
-  }
-  
-  // ✅ فحص مستمر على فترات (كل 1 ثانية) لمراقبة أدوات المطور
-  setInterval(detectDevTools, 1000);
-
-});
+})();
