@@ -48,6 +48,15 @@
   --contrast-color: #ffffff;
 }
 
+/* Improve first paint: defer layout/render cost of below-the-fold sections */
+@media (min-width: 768px) {
+  #resume,
+  #services {
+    content-visibility: auto;
+    contain-intrinsic-size: 900px;
+  }
+}
+
 /* Smooth scroll */
 :root {
   scroll-behavior: smooth;
@@ -61,6 +70,41 @@ body {
   background-color: var(--background-color);
   font-family: var(--default-font);
   text-transform: capitalize;
+}
+
+/* Show sections only while they are in viewport */
+body.section-visibility-enabled .main > section:not(#portfolio):not(#contact) {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+
+body.section-visibility-enabled .main > section:not(#portfolio):not(#contact).section-in-view {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Accessibility: visible keyboard focus and skip link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 12px;
+  z-index: 2000;
+  background: #111;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+}
+
+.skip-link:focus {
+  top: 12px;
+}
+
+a:focus-visible,
+button:focus-visible,
+.navmenu a:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
 }
 img{
   border-radius: 10px;
@@ -85,6 +129,41 @@ h5,
 h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
+}
+
+/*--------------------------------------------------------------
+# Section Utilities
+--------------------------------------------------------------*/
+.site-name-compact {
+  font-size: 20px !important;
+}
+
+.brand-accent {
+  color: tomato;
+}
+
+.hero-title-glow {
+  text-shadow: 1px 1px 50px rgb(248, 180, 180);
+}
+
+.hero-name-accent {
+  color: chocolate;
+}
+
+.about-label {
+  color: #000;
+}
+
+.resume-link {
+  color: rgb(99, 98, 98);
+}
+
+.services-offset {
+  margin-top: -50px;
+}
+
+.portfolio-client-small {
+  font-size: 14px;
 }
 
 /*--------------------------------------------------------------
@@ -399,14 +478,53 @@ height: 40px;
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background:
+    radial-gradient(circle at 20% 20%, color-mix(in srgb, var(--accent-color), transparent 82%), transparent 48%),
+    radial-gradient(circle at 80% 80%, color-mix(in srgb, #ff9f43, transparent 85%), transparent 45%),
+    linear-gradient(135deg, #041527 0%, #0b2c4a 45%, #0a1d32 100%);
   font-size: 14px;
-  padding: 40px 0;
+  padding: 46px 0;
   position: relative;
+  overflow: hidden;
+}
+
+.footer::before,
+.footer::after {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(2px);
+  opacity: 0.28;
+  animation: footerFloat 9s ease-in-out infinite alternate;
+}
+
+.footer::before {
+  top: -110px;
+  left: -90px;
+  background: color-mix(in srgb, #5cc8ff, transparent 70%);
+}
+
+.footer::after {
+  right: -95px;
+  bottom: -120px;
+  background: color-mix(in srgb, #ffb76b, transparent 76%);
+  animation-delay: 1.8s;
+}
+
+.footer .container {
+  position: relative;
+  z-index: 1;
 }
 
 .footer .copyright p {
   margin-bottom: 0;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+  color: color-mix(in srgb, #ffffff, transparent 5%);
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.25);
 }
 
 .footer .social-links {
@@ -440,6 +558,15 @@ height: 40px;
 
 .footer .credits a {
   color: color-mix(in srgb, var(--default-color), transparent 30%);
+}
+
+@keyframes footerFloat {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(16px, -18px) scale(1.08);
+  }
 }
 
 /*--------------------------------------------------------------
@@ -775,6 +902,60 @@ section,
   border: 2px solid var(--accent-color);
 }
 
+/* Resume Actions */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.resume-actions {
+  margin-top: 15px;
+}
+
+.resume .btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.resume .btn-success {
+  background-color: #28a745;
+  color: #fff;
+  transition: 0.8s;
+}
+
+.resume .btn-secondary {
+  background-color: #6c757d;
+  color: #fff;
+}
+
+.pdf-viewer {
+  display: none;
+  margin-top: 20px;
+}
+
+.pdf-viewer.is-open {
+  display: block;
+}
+
+.pdf-viewer.pdf-animate {
+  animation: fadeSlideIn 0.8s ease forwards;
+}
+
+.pdf-frame {
+  border: 1px solid #ccc;
+}
+
 
 /*--------------------------------------------------------------
 # services Section
@@ -903,41 +1084,122 @@ section,
 --------------------------------------------------------------*/
 .portfolio .portfolio-filters {
   padding: 0;
-  margin: 0 auto 20px auto;
+  margin: 0;
   list-style: none;
-  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px 14px;
+  align-items: center;
+}
+
+.portfolio .portfolio-filters-slider {
+  max-width: 980px;
+  margin: 0 auto 24px auto;
+  overflow: visible;
+}
+
+.portfolio .portfolio-filter-nav {
+  display: none;
 }
 
 .portfolio .portfolio-filters li {
   cursor: pointer;
-  display: inline-block;
-  padding: 0;
-  font-size: 16px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  font-size: 14px;
   font-weight: 600;
-  margin: 0 10px;
   line-height: 1;
   text-transform: uppercase;
-  margin-bottom: 5px;
-  transition: all 0.3s ease-in-out;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 75%);
+  background: color-mix(in srgb, var(--surface-color), transparent 10%);
+  transition: transform 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  transform-origin: center center;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.portfolio .portfolio-filters li img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  border-radius: 8px;
 }
 
 .portfolio .portfolio-filters li:hover,
 .portfolio .portfolio-filters li.filter-active {
   color: var(--accent-color);
+  border-color: color-mix(in srgb, var(--accent-color), transparent 40%);
+  box-shadow: 0 8px 18px color-mix(in srgb, var(--accent-color), transparent 75%);
 }
 
-.portfolio .portfolio-filters li:first-child {
-  margin-left: 0;
+.portfolio .portfolio-filters li.filter-active {
+  transform: scale(1.5);
+  z-index: 2;
 }
 
-.portfolio .portfolio-filters li:last-child {
-  margin-right: 0;
-}
+@media (max-width: 767px) {
+  .portfolio .portfolio-filters-slider {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 8px;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
 
-@media (max-width: 575px) {
+  .portfolio .portfolio-filter-nav {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 70%);
+    background: var(--surface-color);
+    color: var(--default-color);
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .portfolio .portfolio-filter-nav:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+  }
+
+  .portfolio .portfolio-filters {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    gap: 10px;
+    padding: 4px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .portfolio .portfolio-filters::-webkit-scrollbar {
+    display: none;
+  }
+
   .portfolio .portfolio-filters li {
-    font-size: 14px;
-    margin: 0 5px;
+    flex: 0 0 calc(50% - 6px);
+    padding: 8px 10px;
+    font-size: 12px;
+    scroll-snap-align: center;
+  }
+
+  .portfolio .portfolio-filters li img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .portfolio .portfolio-filters li.filter-active {
+    transform: scale(1.08);
   }
 }
 
@@ -1004,6 +1266,91 @@ section,
   width: 100%;
 }
 
+.portfolio-details .portfolio-details-slider.portfolio-device-switcher .swiper-pagination {
+  display: none !important;
+}
+
+.portfolio-details .portfolio-details-slider .swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.portfolio-details .portfolio-details-slider .portfolio-device-frame {
+  width: min(100%, 920px);
+  aspect-ratio: 16 / 9;
+  margin: 0 auto;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #080808;
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 75%);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28), 0 0 26px color-mix(in srgb, var(--accent-color), transparent 82%);
+}
+
+.portfolio-details .portfolio-details-slider.device-mobile .portfolio-device-frame {
+  width: min(100%, 300px);
+  aspect-ratio: 9 / 16;
+  max-height: 520px;
+}
+
+@media (max-width: 767px) {
+  .portfolio-details .portfolio-details-slider.device-mobile .portfolio-device-frame {
+    width: min(100%, 320px);
+    aspect-ratio: 9 / 15.2;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3), 0 0 34px color-mix(in srgb, var(--accent-color), transparent 74%);
+  }
+}
+
+.portfolio-details .portfolio-details-slider .portfolio-device-frame .video-container,
+.portfolio-details .portfolio-details-slider .portfolio-device-frame video {
+  width: 100% !important;
+  height: 100% !important;
+  border: 0;
+  border-radius: inherit;
+  object-fit: cover;
+  margin: 0;
+}
+
+.portfolio-details .device-switch-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+  position: relative;
+  z-index: 6;
+}
+
+.portfolio-details .device-switch-btn {
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 65%);
+  background: var(--surface-color);
+  color: var(--default-color);
+  padding: 8px 14px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.portfolio-details .device-switch-btn i {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.portfolio-details .device-switch-btn.active {
+  color: var(--accent-color);
+  border-color: color-mix(in srgb, var(--accent-color), transparent 35%);
+  transform: translateY(-1px);
+}
+
+.portfolio-details .device-switch-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
 .portfolio-details .portfolio-details-slider .swiper-pagination {
   margin-top: 20px;
   position: relative;
@@ -1060,20 +1407,42 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
+/* Prevent AOS/Isotope race condition from hiding portfolio content on desktop */
+#portfolio [data-aos] {
+  opacity: 1;
+}
+
+/* Match portfolio fix for contact visibility on desktop */
+#contact [data-aos] {
+  opacity: 1;
+}
+
 
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
 .contact .info-wrap {
-  background-color: var(--surface-color);
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  padding: 30px;
+  background:
+    linear-gradient(140deg, color-mix(in srgb, #eaf6ff, #ffffff 45%) 0%, #ffffff 55%, color-mix(in srgb, #eef9f3, #ffffff 50%) 100%);
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 82%);
+  box-shadow: 0 18px 46px rgba(10, 36, 64, 0.12);
+  border-radius: 18px;
+  padding: 34px;
   margin-bottom: 30px;
+}
+
+.contact .info-item {
+  background: color-mix(in srgb, #ffffff, #f2f9ff 18%);
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 85%);
+  border-radius: 14px;
+  padding: 14px 16px;
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
 }
 
 .contact .info-item i {
   font-size: 20px;
-  color: var(--accent-color);
+  color: #0d6fb8;
+  background: color-mix(in srgb, #0d6fb8, transparent 90%);
   width: 56px;
   height: 56px;
   display: flex;
@@ -1089,17 +1458,30 @@ section,
   font-size: 18px;
   font-weight: 700;
   margin: 0 0 2px 0;
+  color: #0f2840;
 }
 
 .contact .info-item p {
   padding: 0;
   margin-bottom: 0;
   font-size: 14px;
+  color: #38526b;
+}
+
+.contact .info-item a {
+  color: inherit;
+  width: 100%;
 }
 
 .contact .info-item:hover i {
-  background: var(--accent-color);
-  color: var(--contrast-color);
+  background: #0d6fb8;
+  color: #fff;
+}
+
+.contact .info-item:hover {
+  transform: translateY(-4px);
+  border-color: color-mix(in srgb, #0d6fb8, transparent 45%);
+  box-shadow: 0 12px 28px rgba(13, 111, 184, 0.18);
 }
 
 

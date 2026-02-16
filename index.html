@@ -4,41 +4,51 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a090f">
 
-  <title>MICHAEL MEKHA </title>
-  <meta name="description" content="">
-  <meta name="keywords" content=" ">
+  <title>Michael Mekha | Full-Stack Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Michael Mekha, a full-stack developer building modern, responsive, and high-performance web applications.">
+  <meta name="keywords" content="Michael Mekha, full stack developer, web developer, frontend, backend, Node.js, React, portfolio">
   <meta name="author" content="MICHAEL MEKHA ">
   <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://mekhamichael.github.io/MEKHA.COM/">
+  <link rel="preload" as="image" href="assets/img/hero-img.jpg" fetchpriority="high">
 
   <!-- Open Graph Meta Tags (for Facebook, LinkedIn, etc.) -->
-  <meta property="og:title" content="MICHAEL MEKHA ">
-  <meta property="og:description" content="">
+  <meta property="og:title" content="Michael Mekha | Full-Stack Developer">
+  <meta property="og:description" content="Discover projects and services by Michael Mekha, full-stack developer specialized in modern web development.">
   <meta property="og:image" content="https://mekhamichael.github.io/MEKHA.COM/assets/img/logo.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:url" content="https://mekhamichael.github.io/MEKHA.COM/">
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Michael Mekha Portfolio">
+  <meta property="og:locale" content="en_US">
 
 
   <!-- Structured Data (Schema Markup for SEO) -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "michael mekha",
+      "@type": "Person",
+      "name": "Michael Mekha",
       "url": "https://mekhamichael.github.io/MEKHA.COM/",
       "logo": "https://mekhamichael.github.io/MEKHA.COM/assets/img/logo.png",
-      "description": "full stack developers.",
+      "jobTitle": "Full-Stack Developer",
+      "description": "Full-stack developer specialized in modern, responsive, and high-performance web applications.",
+      "sameAs": [
+        "https://www.linkedin.com/in/michael-m-328a36205/",
+        "https://www.instagram.com/michael_me5a/"
+      ]
     }
     </script>
 
 
   <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="michael mekha ">
-  <meta name="twitter:description" content="michael mekha full stack developer .">
-  <meta name="twitter:image" content="https://mekhamichael.github.io/MEKHA.COM/logo.png">
+  <meta name="twitter:title" content="Michael Mekha | Full-Stack Developer">
+  <meta name="twitter:description" content="Portfolio of Michael Mekha, full-stack developer.">
+  <meta name="twitter:image" content="https://mekhamichael.github.io/MEKHA.COM/assets/img/logo.png">
   <meta name="twitter:url" content="https://mekhamichael.github.io/MEKHA.COM/">
 
   <!-- Favicons (Ensure Correct Paths) -->
@@ -58,26 +68,33 @@
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link rel="preload" href="assets/vendor/bootstrap-icons/bootstrap-icons.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="assets/vendor/aos/aos.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="assets/vendor/glightbox/css/glightbox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="assets/vendor/swiper/swiper-bundle.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/all.css">
+  <link rel="preload" href="assets/css/all.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript>
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/css/all.css" rel="stylesheet">
+  </noscript>
 
 </head>
 
 <body class="index-page">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <header id="header" class="header d-flex align-items-center sticky-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo.png" alt="">
-        <h1 class="sitename" style="font-size: 20px;">MICHAEL <span style="color: tomato;">MEKHA </span></h1>
+        <img src="assets/img/logo.png" alt="Michael Mekha logo" width="200" height="40">
+        <h1 class="sitename site-name-compact">MICHAEL <span class="brand-accent">MEKHA </span></h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -112,23 +129,23 @@
     </div>
   </header>
 
-  <main class="main">
+  <main id="main-content" class="main">
 
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
-      <img src="assets/img/hero-img.jpg" alt="michael-mekha-profile" data-aos="fade-in">
+      <img src="assets/img/hero-img.jpg" alt="Michael Mekha profile" data-aos="fade-in" fetchpriority="high" decoding="async">
 
       <div class="container d-flex flex-column align-items-center justify-content-center text-center" data-aos="fade-up"
         data-aos-delay="100">
-        <h2 style="text-shadow: 1px 1px 50px rgb(248, 180, 180);">I am <span style="color: chocolate;">Michael Mekha
+        <h2 class="hero-title-glow">I am <span class="hero-name-accent">Michael Mekha
             Maximus</span></h2>
         <p><span class="typed" data-typed-items="full stack, Developer, frontend, Backend"></span></p>
       </div>
 
+      
     </section><!-- /Hero Section -->
 
-    <!-- /////////////////////////////////////////////////////////////////////////// -->
 
     <!-- About Section -->
     <section id="about" class="about section">
@@ -143,17 +160,16 @@
                 <img src="assets/img/profile-img.jpg" class="img-fluid" alt="michael-mekha-image">
               </div>
               <div class="col-lg-8 about-info">
-                <p><strong style="color: black;">Name: </strong> <span>michael mekha </span></p>
-                <p><strong style="color: black;">Profile: </strong> <span>full stack developer</span></p>
+                <p><strong class="about-label">Name: </strong> <span>michael mekha </span></p>
+                <p><strong class="about-label">Profile: </strong> <span>full stack developer</span></p>
                 <a href="mailto:michaelmekha129@gmail.com" target="_blank">
-                  <p><strong style="color: black;">Email: </strong> <span>michaelmekha129@gmail.com</span></p>
+                  <p><strong class="about-label">Email: </strong> <span>michaelmekha129@gmail.com</span></p>
                 </a>
                 <a href="tel:+201202521624" target="_blank">
-                  <p><strong style="color: black;">Phone: </strong> <span>(+20) 1202521624</span></p>
+                  <p><strong class="about-label">Phone: </strong> <span>(+20) 1202521624</span></p>
                 </a>
               </div>
             </div>
-            <!-- ////////////////////////////////////////////////////////////////////////////////////// -->
             <div class="skills-content skills-animation">
 
               <h5>Skills</h5>
@@ -245,87 +261,44 @@
 
     </section><!-- /About Section -->
 
-    <!-- ////////////////////////////////////////////////////////////////////////// -->
 
-    <!-- Resume Section -->
+    <!-- ===== Resume Section ===== -->
     <section id="resume" class="resume section">
 
       <!-- Section Title -->
-      <style>
-        @keyframes fadeSlideIn {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
-        .pdf-animate {
-          animation: fadeSlideIn 0.8s ease forwards;
-        }
-
-        .btn {
-          padding: 10px 20px;
-          border: none;
-          border-radius: 6px;
-          cursor: pointer;
-          font-size: 16px;
-          margin-right: 10px;
-        }
-
-        .btn-success {
-          background-color: #28a745;
-          color: white;
-          transition: 0.8s;
-        }
-
-        .btn-secondary {
-          background-color: #6c757d;
-          color: white;
-        }
-      </style>
 
       <div class="container section-title" data-aos="fade-up">
         <h2>Resume</h2>
         <p>Check out my CV to learn more about my expertise, professional journey, and achievements</p>
 
         <!-- أزرار العرض والتحميل -->
-        <div style="margin-top: 15px;">
-          <button onclick="togglePdf()" id="toggleBtn" class="btn btn-success"> SHOW CV</button>
+        <div class="resume-actions">
+          <button id="toggleBtn" class="btn btn-success" type="button">SHOW CV</button>
           <a href="cv-michael.pdf" download class="btn btn-secondary">DOWNLOAD</a>
         </div>
 
         <!-- عرض ملف PDF -->
-        <div id="pdf-viewer" style="display: none; margin-top: 20px;">
-          <iframe src="cv-michael.pdf" width="100%" height="600px" style="border: 1px solid #ccc;"></iframe>
+        <div id="pdf-viewer" class="pdf-viewer">
+          <iframe src="cv-michael.pdf" width="100%" height="600" class="pdf-frame"></iframe>
         </div>
       </div>
 
-      <script>
-        function togglePdf() {
-          const viewer = document.getElementById('pdf-viewer');
-          const button = document.getElementById('toggleBtn');
-
-          if (viewer.style.display === 'none') {
+      <!--
+      
+          
+          
+          
+          
+          
+          
             // عرض الملف مع أنيميشن
-            viewer.style.display = 'block';
-            viewer.classList.add('pdf-animate');
-            button.textContent = 'cancel';
-          } else {
+            
             // إخفاء الملف وإعادة الزر للوضع الأول
-            viewer.style.display = 'none';
-            button.textContent = '  SHOW CV';
-            viewer.classList.remove('pdf-animate');
-
-          }
-        }
-      </script>
+            
+      
 
 
+      -->
       <div class="container">
 
         <div class="row">
@@ -340,9 +313,9 @@
                   web applications from initial concept to final, fully functional product.</em></p>
               <ul>
                 <li> Assiut, Egypt </li>
-                <li><a style="color: rgb(99, 98, 98);" href="tel:+201275058244" target="_blank"><span> (+20)
+                <li><a class="resume-link" href="tel:+201275058244" target="_blank"><span> (+20)
                       1275078244</span></a> </li>
-                <li><a style="color: rgb(99, 98, 98);" href="mailto:michaelmekha129@gmail.com" target="_blank"><span>
+                <li><a class="resume-link" href="mailto:michaelmekha129@gmail.com" target="_blank"><span>
                       michaelmekha129@gmail.com</span></a> </li>
               </ul>
             </div><!-- Edn Resume Item -->
@@ -382,34 +355,18 @@
 
     </section><!-- /Resume Section -->
 
-    <!-- ///////////////////////////////////////////////////////////////////////////////////// -->
 
     <section id="services" class="testimonials section ">
       <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up" style="margin-top: -50px;">
+      <div class="container section-title services-offset" data-aos="fade-up">
         <h2>Services</h2>
       </div><!-- End Section Title -->
 
       <img src="assets/img/testimonials-bg.jpg" class="testimonials-bg" alt="">
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100" style="margin-top: -50px;">
+      <div class="container services-offset" data-aos="fade-up" data-aos-delay="100">
 
-        <div class="swiper init-swiper">
-          <script type="application/json" class="swiper-config">
-        {
-          "loop": true,
-          "speed": 600,
-          "autoplay": {
-            "delay": 5000
-          },
-          "slidesPerView": "auto",
-          "pagination": {
-            "el": ".swiper-pagination",
-            "type": "bullets",
-            "clickable": true
-          }
-        }
-      </script>
+        <div class="swiper init-swiper" data-swiper-speed="600" data-swiper-delay="5000">
           <div class="swiper-wrapper">
 
             <div class="swiper-slide">
@@ -525,7 +482,6 @@
     </section>
 
 
-    <!-- ///////////////////////////////////////////////////////////////////////////// -->
 
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio section">
@@ -548,7 +504,7 @@
             <li data-filter=".filter-hank"><img src="assets/img/portfolio/logo-hank.png" width="40px" height="40px"
                 alt=""> hancology</li>
             <li data-filter=".filter-ling"><img src="assets/img/portfolio/logo-ling.png" width="40px" height="40px"
-                alt=""> linguine</li><br>
+                alt=""> linguine</li>
             <li data-filter=".filter-sakhra"><img src="assets/img/portfolio/logo-sakhra.png" width="40px" height="40px"
                 alt=""> ELSAKHRA</li>
             <li data-filter=".filter-mob"> <img src="assets/img/portfolio/logo-mob.png" width="40px" height="60px"
@@ -563,54 +519,22 @@
 
             <div class="col-lg-12 col-md-12 portfolio-item isotope-item filter-66">
               <!-- Portfolio Details Section -->
-              <section id="portfolio-details" class="portfolio-details section">
+              <section class="portfolio-details section">
 
                 <div class="container" data-aos="fade-up" data-aos-delay="100">
 
                   <div class="row gy-4">
 
                     <div class="col-lg-8">
-                      <div class="portfolio-details-slider swiper init-swiper">
-
-                        <script type="application/json" class="swiper-config">
-                {
-                  "loop": true,
-                  "speed": 400,
-                  "autoplay": {
-                    "delay": 240000
-                  },
-                  "slidesPerView": "auto",
-                  "pagination": {
-                    "el": ".swiper-pagination",
-                    "type": "bullets",
-                    "clickable": true
-                  }
-                }
-              </script>
+                      <div class="portfolio-details-slider swiper init-swiper" data-swiper-speed="400" data-swiper-delay="240000">
 
                         <div class="swiper-wrapper ">
-                          <style>
-                            .video-container {
-                              width: 100%;
-                              max-width: 100%;
-                              margin: 0 auto;
-                              border-radius: 12px;
-                              overflow: hidden;
-                              box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-                            }
-
-                            .video-container video {
-                              width: 100%;
-                              height: auto;
-                              display: block;
-                              border: none;
-                            }
-
-                            /* الشاشات الصغيرة (موبايل) */
-                          </style>
+                          
+                            
+                          
                           <div class="swiper-slide">
                             <div class="video-container">
-                              <video autoplay muted loop controls poster="poster.jpg" class="vvv">
+                              <video controls preload="none" playsinline poster="assets/img/portfolio/66_desk.png" class="vvv">
                                 <source src="assets/img/portfolio/66 pc.mp4" type="video/mp4">
                                 your browser dosn't support video
                               </video>
@@ -618,7 +542,7 @@
                           </div>
 
                           <div class="swiper-slide mob">
-                            <video autoplay muted loop controls poster="poster.jpg" width="100%" height="400px">
+                            <video controls preload="none" playsinline poster="assets/img/portfolio/66_phone.jpeg" width="100%" height="400px">
                               <source src="assets/img/portfolio/66phone.mp4" type="video/mp4">
                               your browser dosn't support video
                             </video>
@@ -663,54 +587,20 @@
 
             <div class="col-lg-12 col-md-12 portfolio-item isotope-item filter-cos">
               <!-- Portfolio Details Section -->
-              <section id="portfolio-details" class="portfolio-details section">
+              <section class="portfolio-details section">
 
                 <div class="container" data-aos="fade-up" data-aos-delay="100">
 
                   <div class="row gy-4">
 
                     <div class="col-lg-8">
-                      <div class="portfolio-details-slider swiper init-swiper">
-
-                        <script type="application/json" class="swiper-config">
-                {
-                  "loop": true,
-                  "speed": 400,
-                  "autoplay": {
-                    "delay": 110000
-                  },
-                  "slidesPerView": "auto",
-                  "pagination": {
-                    "el": ".swiper-pagination",
-                    "type": "bullets",
-                    "clickable": true
-                  }
-                }
-              </script>
+                      <div class="portfolio-details-slider swiper init-swiper" data-swiper-speed="400" data-swiper-delay="110000">
 
                         <div class="swiper-wrapper align-items-center">
-                          <style>
-                            .video-container {
-                              width: 100%;
-                              max-width: 100%;
-                              margin: 0 auto;
-                              border-radius: 12px;
-                              overflow: hidden;
-                              box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-                            }
-
-                            .video-container video {
-                              width: 100%;
-                              height: auto;
-                              display: block;
-                              border: none;
-                            }
-
-                            /* الشاشات الصغيرة (موبايل) */
-                          </style>
+                          
                           <div class="swiper-slide">
                             <div class="video-container">
-                              <video autoplay muted loop controls poster="assets/img/portfolio/costa 1.png" width="100%"
+                              <video controls preload="none" playsinline poster="assets/img/portfolio/costa_desk.png" width="100%"
                                 height="500px">
                                 <source src="assets/img/portfolio/costa-pc.mp4" type="video/mp4">
                                 your browser dosn't support video
@@ -719,7 +609,7 @@
                           </div>
 
                           <div class="swiper-slide mob">
-                            <video autoplay muted loop controls poster="assets/img/portfolio/costa 3.png" width="100%"
+                            <video controls preload="none" playsinline poster="assets/img/portfolio/costa_phone.jpeg" width="100%"
                               height="500px">
                               <source src="assets/img/portfolio/costa-phone.mp4" type="video/mp4">
                               your browser dosn't support video
@@ -763,54 +653,20 @@
 
             <div class="col-lg-12 col-md-12 portfolio-item isotope-item filter-hank">
               <!-- Portfolio Details Section -->
-              <section id="portfolio-details" class="portfolio-details section">
+              <section class="portfolio-details section">
 
                 <div class="container" data-aos="fade-up" data-aos-delay="100">
 
                   <div class="row gy-4">
 
                     <div class="col-lg-8">
-                      <div class="portfolio-details-slider swiper init-swiper">
-
-                        <script type="application/json" class="swiper-config">
-                {
-                  "loop": true,
-                  "speed": 400,
-                  "autoplay": {
-                    "delay": 110000
-                  },
-                  "slidesPerView": "auto",
-                  "pagination": {
-                    "el": ".swiper-pagination",
-                    "type": "bullets",
-                    "clickable": true
-                  }
-                }
-              </script>
+                      <div class="portfolio-details-slider swiper init-swiper" data-swiper-speed="400" data-swiper-delay="110000">
 
                         <div class="swiper-wrapper align-items-center">
-                          <style>
-                            .video-container {
-                              width: 100%;
-                              max-width: 100%;
-                              margin: 0 auto;
-                              border-radius: 12px;
-                              overflow: hidden;
-                              box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-                            }
-
-                            .video-container video {
-                              width: 100%;
-                              height: auto;
-                              display: block;
-                              border: none;
-                            }
-
-                            /* الشاشات الصغيرة (موبايل) */
-                          </style>
+                          
                           <div class="swiper-slide">
                             <div class="video-container">
-                              <video autoplay muted loop controls poster="assets/img/portfolio/" width="100%"
+                              <video controls preload="none" playsinline poster="assets/img/portfolio/hank_desk.png" width="100%"
                                 height="500px">
                                 <source src="assets/img/portfolio/hank-pc.mp4" type="video/mp4">
                                 your browser dosn't support video
@@ -819,7 +675,7 @@
                           </div>
 
                           <div class="swiper-slide mob">
-                            <video autoplay muted loop controls poster="assets/img/portfolio/hank-phone-poster.jpg"
+                            <video controls preload="none" playsinline poster="assets/img/portfolio/hank_phone.jpeg"
                               width="100%" height="500px">
                               <source src="assets/img/portfolio/hank-phone.mp4" type="video/mp4">
                               your browser dosn't support video
@@ -862,54 +718,20 @@
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-12 col-md-12 portfolio-item isotope-item filter-ling">
-              <section id="portfolio-details" class="portfolio-details section">
+              <section class="portfolio-details section">
 
                 <div class="container" data-aos="fade-up" data-aos-delay="100">
 
                   <div class="row gy-4">
 
                     <div class="col-lg-8">
-                      <div class="portfolio-details-slider swiper init-swiper">
-
-                        <script type="application/json" class="swiper-config">
-                {
-                  "loop": true,
-                  "speed": 400,
-                  "autoplay": {
-                    "delay": 110000
-                  },
-                  "slidesPerView": "auto",
-                  "pagination": {
-                    "el": ".swiper-pagination",
-                    "type": "bullets",
-                    "clickable": true
-                  }
-                }
-              </script>
+                      <div class="portfolio-details-slider swiper init-swiper" data-swiper-speed="400" data-swiper-delay="110000">
 
                         <div class="swiper-wrapper align-items-center">
-                          <style>
-                            .video-container {
-                              width: 100%;
-                              max-width: 100%;
-                              margin: 0 auto;
-                              border-radius: 12px;
-                              overflow: hidden;
-                              box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-                            }
-
-                            .video-container video {
-                              width: 100%;
-                              height: auto;
-                              display: block;
-                              border: none;
-                            }
-
-                            /* الشاشات الصغيرة (موبايل) */
-                          </style>
+                          
                           <div class="swiper-slide">
                             <div class="video-container">
-                              <video autoplay muted loop controls poster="assets/img/portfolio/ling 1.png" width="100%"
+                              <video controls preload="none" playsinline poster="assets/img/portfolio/ling_desk.png" width="100%"
                                 height="500px">
                                 <source src="assets/img/portfolio/ling-pc.mp4" type="video/mp4">
                                 your browser dosn't support video
@@ -918,7 +740,7 @@
                           </div>
 
                           <div class="swiper-slide mob">
-                            <video autoplay muted loop controls poster="assets/img/portfolio/ling 1.png" width="100%"
+                            <video controls preload="none" playsinline poster="assets/img/portfolio/ling_phone.jpeg" width="100%"
                               height="500px">
                               <source src="assets/img/portfolio/ling-phone.mp4" type="video/mp4">
                               your browser dosn't support video
@@ -961,54 +783,20 @@
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-12 col-md-12 portfolio-item isotope-item filter-sakhra">
-              <section id="portfolio-details" class="portfolio-details section">
+              <section class="portfolio-details section">
 
                 <div class="container" data-aos="fade-up" data-aos-delay="100">
 
                   <div class="row gy-4">
 
                     <div class="col-lg-8">
-                      <div class="portfolio-details-slider swiper init-swiper">
-
-                        <script type="application/json" class="swiper-config">
-                {
-                  "loop": true,
-                  "speed": 400,
-                  "autoplay": {
-                    "delay": 410000
-                  },
-                  "slidesPerView": "auto",
-                  "pagination": {
-                    "el": ".swiper-pagination",
-                    "type": "bullets",
-                    "clickable": true
-                  }
-                }
-              </script>
+                      <div class="portfolio-details-slider swiper init-swiper" data-swiper-speed="400" data-swiper-delay="410000">
 
                         <div class="swiper-wrapper align-items-center">
-                          <style>
-                            .video-container {
-                              width: 100%;
-                              max-width: 100%;
-                              margin: 0 auto;
-                              border-radius: 12px;
-                              overflow: hidden;
-                              box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-                            }
-
-                            .video-container video {
-                              width: 100%;
-                              height: auto;
-                              display: block;
-                              border: none;
-                            }
-
-                            /* الشاشات الصغيرة (موبايل) */
-                          </style>
+                          
                           <div class="swiper-slide">
                             <div class="video-container">
-                              <video autoplay muted loop controls poster="assets/img/portfolio/" width="100%"
+                              <video controls preload="none" playsinline poster="assets/img/portfolio/elsakhra_desk.png" width="100%"
                                 height="500px">
                                 <source src="assets/img/portfolio/elsakhra-pc.mp4" type="video/mp4">
                                 your browser dosn't support video
@@ -1017,7 +805,7 @@
                           </div>
 
                           <div class="swiper-slide mob">
-                            <video autoplay muted loop controls poster="assets/img/portfolio/" width="100%"
+                            <video controls preload="none" playsinline poster="assets/img/portfolio/elsakhra_phone.jpeg" width="100%"
                               height="500px">
                               <source src="assets/img/portfolio/elsakhra-phone.mp4" type="video/mp4">
                               your browser dosn't support video
@@ -1036,7 +824,7 @@
                         <h3>Project information</h3>
                         <ul>
                           <li><strong>Category</strong>: Website </li>
-                          <li style="font-size: 14px;"><strong>Client</strong>: ELSAKHRA FOR HEAVY MACHINERY</li>
+                          <li class="portfolio-client-small"><strong>Client</strong>: ELSAKHRA FOR HEAVY MACHINERY</li>
                           <li><strong>Project date</strong>: 20 may, 2025</li>
                           <li><strong>Project URL</strong>: <a href="https://www.elsakhra.co/"
                               target="_blank">www.elsakhra.co</a></li>
@@ -1066,54 +854,20 @@
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-12 col-md-12 portfolio-item isotope-item filter-mob">
-              <section id="portfolio-details" class="portfolio-details section">
+              <section class="portfolio-details section">
 
                 <div class="container" data-aos="fade-up" data-aos-delay="100">
 
                   <div class="row gy-4">
 
                     <div class="col-lg-8">
-                      <div class="portfolio-details-slider swiper init-swiper">
-
-                        <script type="application/json" class="swiper-config">
-                {
-                  "loop": true,
-                  "speed": 400,
-                  "autoplay": {
-                    "delay": 410000
-                  },
-                  "slidesPerView": "auto",
-                  "pagination": {
-                    "el": ".swiper-pagination",
-                    "type": "bullets",
-                    "clickable": true
-                  }
-                }
-              </script>
+                      <div class="portfolio-details-slider swiper init-swiper" data-swiper-speed="400" data-swiper-delay="410000">
 
                         <div class="swiper-wrapper align-items-center">
-                          <style>
-                            .video-container {
-                              width: 100%;
-                              max-width: 100%;
-                              margin: 0 auto;
-                              border-radius: 12px;
-                              overflow: hidden;
-                              box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-                            }
-
-                            .video-container video {
-                              width: 100%;
-                              height: auto;
-                              display: block;
-                              border: none;
-                            }
-
-                            /* الشاشات الصغيرة (موبايل) */
-                          </style>
+                          
                           <div class="swiper-slide">
                             <div class="video-container">
-                              <video autoplay muted loop controls poster="assets/img/portfolio/" width="100%"
+                              <video controls preload="none" playsinline poster="assets/img/portfolio/" width="100%"
                                 height="500px">
                                 <source src="assets/img/portfolio/mob.mp4" type="video/mp4">
                                 your browser dosn't support video
@@ -1131,7 +885,7 @@
                         <h3>Project information</h3>
                         <ul>
                           <li><strong>Category</strong>: Website </li>
-                          <li style="font-size: 14px;"><strong>Client</strong>: mobstore</li>
+                          <li class="portfolio-client-small"><strong>Client</strong>: mobstore</li>
                           <li><strong>Project date</strong>: 20 mar, 2024</li>
                           <li><strong>Project URL</strong>: <a href="https://mekhamichael.github.io/mob-store-html_css/"
                               target="_blank">www.mobstore.com</a></li>
@@ -1155,54 +909,20 @@
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-12 col-md-12 portfolio-item isotope-item filter-rock">
-              <section id="portfolio-details" class="portfolio-details section">
+              <section class="portfolio-details section">
 
                 <div class="container" data-aos="fade-up" data-aos-delay="100">
 
                   <div class="row gy-4">
 
                     <div class="col-lg-8">
-                      <div class="portfolio-details-slider swiper init-swiper">
-
-                        <script type="application/json" class="swiper-config">
-                {
-                  "loop": true,
-                  "speed": 400,
-                  "autoplay": {
-                    "delay": 410000
-                  },
-                  "slidesPerView": "auto",
-                  "pagination": {
-                    "el": ".swiper-pagination",
-                    "type": "bullets",
-                    "clickable": true
-                  }
-                }
-              </script>
+                      <div class="portfolio-details-slider swiper init-swiper" data-swiper-speed="400" data-swiper-delay="410000">
 
                         <div class="swiper-wrapper align-items-center">
-                          <style>
-                            .video-container {
-                              width: 100%;
-                              max-width: 100%;
-                              margin: 0 auto;
-                              border-radius: 12px;
-                              overflow: hidden;
-                              box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-                            }
-
-                            .video-container video {
-                              width: 100%;
-                              height: auto;
-                              display: block;
-                              border: none;
-                            }
-
-                            /* الشاشات الصغيرة (موبايل) */
-                          </style>
+                          
                           <div class="swiper-slide">
                             <div class="video-container">
-                              <video autoplay muted loop controls poster="assets/img/portfolio/" width="100%"
+                              <video controls preload="none" playsinline poster="assets/img/portfolio/" width="100%"
                                 height="500px">
                                 <source src="assets/img/portfolio/rocker.mp4" type="video/mp4">
                                 your browser dosn't support video
@@ -1220,7 +940,7 @@
                         <h3>Project information</h3>
                         <ul>
                           <li><strong>Category</strong>: Website </li>
-                          <li style="font-size: 14px;"><strong>Client</strong>: rocker</li>
+                          <li class="portfolio-client-small"><strong>Client</strong>: rocker</li>
                           <li><strong>Project date</strong>: 20 jun, 2024</li>
                           <li><strong>Project URL</strong>: <a href="https://mekhamichael.github.io/Rocker/"
                               target="_blank">www.rocker.com</a></li>
@@ -1245,54 +965,20 @@
             </div><!-- End Portfolio Item -->
 
             <div class="col-lg-12 col-md-12 portfolio-item isotope-item filter-lens">
-              <section id="portfolio-details" class="portfolio-details section">
+              <section class="portfolio-details section">
 
                 <div class="container" data-aos="fade-up" data-aos-delay="100">
 
                   <div class="row gy-4">
 
                     <div class="col-lg-8">
-                      <div class="portfolio-details-slider swiper init-swiper">
-
-                        <script type="application/json" class="swiper-config">
-                {
-                  "loop": true,
-                  "speed": 400,
-                  "autoplay": {
-                    "delay": 110000
-                  },
-                  "slidesPerView": "auto",
-                  "pagination": {
-                    "el": ".swiper-pagination",
-                    "type": "bullets",
-                    "clickable": true
-                  }
-                }
-              </script>
+                      <div class="portfolio-details-slider swiper init-swiper" data-swiper-speed="400" data-swiper-delay="110000">
 
                         <div class="swiper-wrapper align-items-center">
-                          <style>
-                            .video-container {
-                              width: 100%;
-                              max-width: 100%;
-                              margin: 0 auto;
-                              border-radius: 12px;
-                              overflow: hidden;
-                              box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-                            }
-
-                            .video-container video {
-                              width: 100%;
-                              height: auto;
-                              display: block;
-                              border: none;
-                            }
-
-                            /* الشاشات الصغيرة (موبايل) */
-                          </style>
+                          
                           <div class="swiper-slide">
                             <div class="video-container">
-                              <video autoplay muted loop controls poster="assets/img/portfolio/ling 1.png" width="100%"
+                              <video controls preload="none" playsinline poster="assets/img/portfolio/ling 1.png" width="100%"
                                 height="500px">
                                 <source src="assets/img/portfolio/len-pc.mp4" type="video/mp4">
                                 your browser dosn't support video
@@ -1301,7 +987,7 @@
                           </div>
 
                           <div class="swiper-slide mob">
-                            <video autoplay muted loop controls poster="assets/img/portfolio/" width="100%"
+                            <video controls preload="none" playsinline poster="assets/img/portfolio/" width="100%"
                               height="500px">
                               <source src="assets/img/portfolio/" type="video/mp4">
                               your browser dosn't support video
@@ -1320,7 +1006,7 @@
                         <h3>Project information</h3>
                         <ul>
                           <li><strong>Category</strong>: Website </li>
-                          <li style="font-size: 14px;"><strong>Client</strong>: lensify</li>
+                          <li class="portfolio-client-small"><strong>Client</strong>: lensify</li>
                           <li><strong>Project date</strong>: 20 jul, 2024</li>
                           <li><strong>Project URL</strong>: <a href="https://mekhamichael.github.io/Lensify/"
                               target="_blank">www.lensify.com</a></li>
@@ -1353,7 +1039,6 @@
 
     </section><!-- /Portfolio Section -->
 
-    <!-- ////////////////////////////////////////////////////////////////////////////////// -->
 
 
     <!-- Contact Section -->
@@ -1373,11 +1058,11 @@
             <div class="col-lg-4">
               <div class="info-item d-flex align-items-center">
                 <i class="bi bi-instagram"></i>
-                <a href="https://www.instagram.com/michael_me5a/profilecard/?igsh=MTd0MTM4emo1b2RrMA%3D%3D"
+                <a href="https://www.instagram.com/mekha_dev?igsh=MXF0cGF4NWkzdjd1Mg=="
                   target="_blank">
                   <div>
                     <h3>Instagram</h3>
-                    <p>michael mekha</p>
+                    <p>mekha dev</p>
                   </div>
                 </a>
               </div>
@@ -1386,10 +1071,10 @@
             <div class="col-lg-4">
               <div class="info-item d-flex align-items-center">
                 <i class="bi bi-facebook"></i>
-                <a href="https://www.facebook.com/michaelmekha.come.1/" target="_blank">
+                <a href="https://www.facebook.com/profile.php?id=61581361028830" target="_blank">
                   <div>
                     <h3>facebook</h3>
-                    <p>michael mekha</p>
+                    <p>mekha dev</p>
                   </div>
                 </a>
               </div>
@@ -1422,10 +1107,10 @@
             <div class="col-lg-4">
               <div class="info-item d-flex align-items-center">
                 <i class="bi bi-google"></i>
-                <a href="mailto:michaelmekha129@gmail.com" target="_blank">
+                <a href="mailto:michaelmekha650@gmail.com" target="_blank">
                   <div>
                     <h3>Gmail</h3>
-                    <p>michaelmekha129@gmail.com</p>
+                    <p>michaelmekha650@gmail.com</p>
                   </div>
                 </a>
               </div>
@@ -1453,7 +1138,6 @@
     </section><!-- /Contact Section -->
 
   </main>
-  <!-- ///////////////////////////////////////////////////////////////////////////////////// -->
   <footer id="footer" class="footer accent-background">
 
     <div class="container">
@@ -1473,22 +1157,17 @@
 
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-<script></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+  <script src="assets/vendor/aos/aos.js" defer></script>
+  <script src="assets/vendor/typed.js/typed.umd.js" defer></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js" defer></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js" defer></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js" defer></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js" defer></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js" defer></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js" defer></script>
   <!-- Main JS File -->
-  <script src="assets/js/main.js"></script>
-<script>
-  
-</script>
+  <script src="assets/js/main.js" defer></script>
 </body>
 
 </html>
