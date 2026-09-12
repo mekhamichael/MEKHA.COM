@@ -1,8 +1,8 @@
 (function () {
   "use strict";
 
-  /* ===== Shared Utils ===== */
-  /* --- Idle Scheduler --- */
+  
+  
   function deferUntilIdle(callback, timeout) {
     if ("requestIdleCallback" in window) {
       window.requestIdleCallback(callback, { timeout: timeout || 1200 });
@@ -11,7 +11,7 @@
     }
   }
 
-  /* --- Header Scroll State --- */
+  
   function toggleScrolled() {
     const body = document.body;
     const header = document.querySelector("#header");
@@ -26,8 +26,8 @@
     window.scrollY > 100 ? body.classList.add("scrolled") : body.classList.remove("scrolled");
   }
 
-  /* ===== Header/Nav ===== */
-  /* --- Mobile Nav Toggle --- */
+  
+  
   function mobileNavToogle() {
     const btn = document.querySelector(".mobile-nav-toggle");
     if (!btn) return;
@@ -36,14 +36,14 @@
     btn.classList.toggle("bi-x");
   }
 
-  /* --- Scroll Top Visibility --- */
+  
   function toggleScrollTop() {
     const scrollTop = document.querySelector(".scroll-top");
     if (!scrollTop) return;
     window.scrollY > 100 ? scrollTop.classList.add("active") : scrollTop.classList.remove("active");
   }
 
-  /* --- AOS Init --- */
+  
   function aosInit() {
     if (typeof AOS === "undefined") return;
     AOS.init({
@@ -54,7 +54,7 @@
     });
   }
 
-  /* --- Swiper Init --- */
+  
   function initSwiper() {
     if (typeof Swiper === "undefined") return;
     document.querySelectorAll(".init-swiper").forEach((swiperElement) => {
@@ -80,7 +80,7 @@
     });
   }
 
-  /* --- Navigation Links / ScrollSpy --- */
+  
   function initNavLinks() {
     const navLinks = document.querySelectorAll('.navmenu a[href^="#"]');
 
@@ -93,7 +93,6 @@
         const header = document.getElementById("header");
 
         if (targetElement && header) {
-          // Ensure target section is visible when section visibility mode is enabled.
           if (document.body.classList.contains("section-visibility-enabled")) {
             targetElement.classList.add("section-in-view");
           }
@@ -143,7 +142,7 @@
     });
   }
 
-  /* --- Portfolio + Contact Layout Refresh --- */
+  
   function refreshPortfolioLayout() {
     const portfolio = document.getElementById("portfolio");
     if (portfolio) {
@@ -176,8 +175,8 @@
     });
   }
 
-  /* ===== Resume Section ===== */
-  /* --- Resume PDF Toggle --- */
+  
+  
   function initResumePdfToggle() {
     const toggleBtn = document.getElementById("toggleBtn");
     const pdfViewer = document.getElementById("pdf-viewer");
@@ -187,7 +186,6 @@
       const isOpen = pdfViewer.classList.toggle("is-open");
       pdfViewer.classList.remove("pdf-animate");
       if (isOpen) {
-        // Restart the entry animation each time it opens.
         void pdfViewer.offsetWidth;
         pdfViewer.classList.add("pdf-animate");
       }
@@ -195,8 +193,8 @@
     });
   }
 
-  /* ===== Portfolio Media ===== */
-  /* --- Video Attribute Optimizations --- */
+  
+  
   function optimizeVideos() {
     const videos = document.querySelectorAll("video");
     videos.forEach((video) => {
@@ -206,7 +204,7 @@
     });
   }
 
-  /* --- Section Visibility Controller --- */
+  
   function initSectionVisibilityControl() {
     const main = document.querySelector(".main");
     if (!main) return;
@@ -250,7 +248,6 @@
       },
       {
         root: null,
-        // Use a low threshold so very tall sections (like portfolio) still count as visible.
         threshold: 0.01
       }
     );
@@ -258,8 +255,8 @@
     sections.forEach((section) => observer.observe(section));
   }
 
-  /* ===== Portfolio Device Switcher ===== */
-  /* --- Desktop/Mobile Media Switcher --- */
+  
+  
   function initPortfolioVideoSwitchers() {
     const sliders = document.querySelectorAll(".portfolio-details-slider");
     if (!sliders.length) return;
@@ -347,7 +344,6 @@
             video.pause();
             video.currentTime = 0;
           } catch (error) {
-            // Ignore media reset errors on blocked states.
           }
         });
 
@@ -364,7 +360,6 @@
               playPromise.catch(() => {});
             }
           } catch (error) {
-            // Playback can be blocked by browser policy.
           }
         }, 320);
       };
@@ -422,8 +417,8 @@
     });
   }
 
-  /* ===== Portfolio Filters ===== */
-  /* --- Mobile Filter Slider Controls --- */
+  
+  
   function initPortfolioFilterSlider() {
     const filterLists = document.querySelectorAll(".portfolio .portfolio-filters.isotope-filters");
     if (!filterLists.length) return;
@@ -522,13 +517,12 @@
     });
   }
 
-  /* ===== DOMContentLoaded Boot ===== */
+  
   document.addEventListener("DOMContentLoaded", function () {
     toggleScrolled();
-    initSectionVisibilityControl();
     initResumePdfToggle();
 
-    /* --- Mobile Nav Events --- */
+    
     const mobileNavToggleBtn = document.querySelector(".mobile-nav-toggle");
     if (mobileNavToggleBtn) {
       mobileNavToggleBtn.addEventListener("click", mobileNavToogle);
@@ -551,7 +545,7 @@
       });
     });
 
-    /* --- Scroll Top Event --- */
+    
     const scrollTop = document.querySelector(".scroll-top");
     if (scrollTop) {
       scrollTop.addEventListener("click", (e) => {
@@ -563,7 +557,7 @@
       });
     }
 
-    /* --- Image Loading Optimization --- */
+    
     document.querySelectorAll("img").forEach((img) => {
       if (!img.closest("#hero") && !img.hasAttribute("loading")) {
         img.setAttribute("loading", "lazy");
@@ -573,7 +567,7 @@
       }
     });
 
-    /* --- External Link Hardening --- */
+    
     document.querySelectorAll('a[href]').forEach((link) => {
       if (!link.href.startsWith(window.location.origin) && !link.href.startsWith("#")) {
         link.setAttribute("target", "_blank");
@@ -581,12 +575,12 @@
       }
     });
 
-    /* --- Immediate Portfolio Initializers --- */
+    
     optimizeVideos();
     initPortfolioVideoSwitchers();
     initPortfolioFilterSlider();
 
-    /* --- Deferred Non-Critical Initializers --- */
+    
     deferUntilIdle(() => {
       if (typeof Typed !== "undefined") {
         const selectTyped = document.querySelector(".typed");
@@ -627,7 +621,7 @@
         GLightbox({ selector: ".glightbox" });
       }
 
-      /* --- Isotope Init + Filter Events --- */
+      
       document.querySelectorAll(".isotope-layout").forEach((isotopeItem) => {
         if (typeof imagesLoaded === "undefined" || typeof Isotope === "undefined") return;
         const layout = isotopeItem.getAttribute("data-layout") || "masonry";
@@ -663,7 +657,7 @@
         });
       });
 
-      /* --- FAQ Toggle Events --- */
+      
       document.querySelectorAll(".faq-item h3, .faq-item .faq-toggle").forEach((faqItem) => {
         faqItem.addEventListener("click", () => {
           faqItem.parentNode.classList.toggle("faq-active");
@@ -672,11 +666,11 @@
     }, 1600);
   });
 
-  /* ===== Window Load Boot ===== */
+  
   window.addEventListener("load", function () {
     toggleScrollTop();
     initNavLinks();
-    /* --- Deferred Visual Initializers --- */
+    
     deferUntilIdle(() => {
       aosInit();
       initSwiper();
@@ -685,7 +679,7 @@
       refreshPortfolioLayout();
     }, 1800);
 
-    /* --- Hash Deep-Link Scroll Fix --- */
+    
     if (window.location.hash) {
       const section = document.querySelector(window.location.hash);
       if (section) {
@@ -700,7 +694,7 @@
     }
   });
 
-  /* ===== Global Runtime Events ===== */
+  
   document.addEventListener("scroll", toggleScrolled);
   document.addEventListener("scroll", toggleScrollTop);
   window.addEventListener("resize", () => {
