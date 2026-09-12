@@ -6,25 +6,25 @@
 }
 
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #4e4e4e; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #0a090f; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #0078ff; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --background-color: #ffffff; 
+  --default-color: #4e4e4e; 
+  --heading-color: #0a090f; 
+  --accent-color: #0078ff; 
+  --surface-color: #ffffff; 
+  --contrast-color: #ffffff; 
 }
 
-/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+
 :root {
-  --nav-color: #ffffff;  /* The default color of the main navmenu links */
-  --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #212529; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #0078ff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #ffffff;  
+  --nav-hover-color: #ffffff; 
+  --nav-mobile-background-color: #ffffff; 
+  --nav-dropdown-background-color: #ffffff; 
+  --nav-dropdown-color: #212529; 
+  --nav-dropdown-hover-color: #0078ff; 
 }
 
-/* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
+
 
 .light-background {
   --background-color: #f9f9f9;
@@ -48,7 +48,7 @@
   --contrast-color: #ffffff;
 }
 
-/* Improve first paint: defer layout/render cost of below-the-fold sections */
+
 @media (min-width: 768px) {
   #resume,
   #services {
@@ -57,34 +57,21 @@
   }
 }
 
-/* Smooth scroll */
+
 :root {
   scroll-behavior: smooth;
 }
 
-/*--------------------------------------------------------------
-# General Styling & Shared Classes
---------------------------------------------------------------*/
+
 body {
   color: var(--default-color);
   background-color: var(--background-color);
   font-family: var(--default-font);
-  text-transform: capitalize;
+  text-transform: none;
 }
 
-/* Show sections only while they are in viewport */
-body.section-visibility-enabled .main > section:not(#portfolio):not(#contact) {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.35s ease, visibility 0.35s ease;
-}
 
-body.section-visibility-enabled .main > section:not(#portfolio):not(#contact).section-in-view {
-  opacity: 1;
-  visibility: visible;
-}
 
-/* Accessibility: visible keyboard focus and skip link */
 .skip-link {
   position: absolute;
   top: -40px;
@@ -131,9 +118,7 @@ h6 {
   font-family: var(--heading-font);
 }
 
-/*--------------------------------------------------------------
-# Section Utilities
---------------------------------------------------------------*/
+
 .site-name-compact {
   font-size: 20px !important;
 }
@@ -166,9 +151,7 @@ h6 {
   font-size: 14px;
 }
 
-/*--------------------------------------------------------------
-# Global Header
---------------------------------------------------------------*/
+
 .header {
   --background-color: #000000;
   --default-color: #ffffff;
@@ -201,10 +184,8 @@ height: 40px;
   box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
 }
 
-/*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
-/* Desktop Navigation */
+
+
 @media (min-width: 1200px) {
   .navmenu {
     padding: 0;
@@ -337,7 +318,7 @@ height: 40px;
   }
 }
 
-/* Mobile Navigation */
+
 @media (max-width: 1199px) {
   .mobile-nav-toggle {
     color: var(--nav-color);
@@ -473,9 +454,7 @@ height: 40px;
   }
 }
 
-/*--------------------------------------------------------------
-# Global Footer
---------------------------------------------------------------*/
+
 .footer {
   color: var(--default-color);
   background:
@@ -569,9 +548,7 @@ height: 40px;
   }
 }
 
-/*--------------------------------------------------------------
-# Scroll Top Button
---------------------------------------------------------------*/
+
 .scroll-top {
   position: fixed;
   visibility: hidden;
@@ -603,18 +580,14 @@ height: 40px;
   bottom: 15px;
 }
 
-/*--------------------------------------------------------------
-# Disable aos animation delay on mobile devices
---------------------------------------------------------------*/
+
 @media screen and (max-width: 768px) {
   [data-aos-delay] {
     transition-delay: 0 !important;
   }
 }
 
-/*--------------------------------------------------------------
-# Global Page Titles & Breadcrumbs
---------------------------------------------------------------*/
+
 .page-title {
   --background-color: color-mix(in srgb, var(--default-color), transparent 96%);
   color: var(--default-color);
@@ -649,9 +622,7 @@ height: 40px;
   color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
 
-/*--------------------------------------------------------------
-# Global Sections
---------------------------------------------------------------*/
+
 section,
 .section {
   color: var(--default-color);
@@ -669,9 +640,7 @@ section,
   }
 }
 
-/*--------------------------------------------------------------
-# Global Section Titles
---------------------------------------------------------------*/
+
 .section-title {
   text-align: center;
   padding-bottom: 60px;
@@ -703,9 +672,7 @@ section,
   margin-bottom: 0;
 }
 
-/*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
+
 .hero {
   width: 100%;
   min-height: calc(100vh - 92px);
@@ -765,9 +732,7 @@ section,
   }
 }
 
-/*--------------------------------------------------------------
-# About Section
---------------------------------------------------------------*/
+
 .about .container {
   background-color: var(--surface-color);
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
@@ -843,9 +808,7 @@ section,
   font-size: 18px;
 }
 
-/*--------------------------------------------------------------
-# Resume Section
---------------------------------------------------------------*/
+
 .resume .resume-title {
   color: var(--heading-color);
   font-size: 26px;
@@ -902,7 +865,7 @@ section,
   border: 2px solid var(--accent-color);
 }
 
-/* Resume Actions */
+
 @keyframes fadeSlideIn {
   from {
     opacity: 0;
@@ -957,9 +920,7 @@ section,
 }
 
 
-/*--------------------------------------------------------------
-# services Section
---------------------------------------------------------------*/
+
 .testimonials {
   padding: 80px 0;
   position: relative;
@@ -1079,9 +1040,7 @@ section,
   }
 }
 
-/*--------------------------------------------------------------
-# Portfolio Section
---------------------------------------------------------------*/
+
 .portfolio .portfolio-filters {
   padding: 0;
   margin: 0;
@@ -1258,9 +1217,7 @@ section,
   bottom: 20px;
 }
 
-/*--------------------------------------------------------------
-# Portfolio Details Section
---------------------------------------------------------------*/
+
 
 .portfolio-details .portfolio-details-slider img {
   width: 100%;
@@ -1407,20 +1364,18 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
 
-/* Prevent AOS/Isotope race condition from hiding portfolio content on desktop */
+
 #portfolio [data-aos] {
   opacity: 1;
 }
 
-/* Match portfolio fix for contact visibility on desktop */
+
 #contact [data-aos] {
   opacity: 1;
 }
 
 
-/*--------------------------------------------------------------
-# Contact Section
---------------------------------------------------------------*/
+
 .contact .info-wrap {
   background:
     linear-gradient(140deg, color-mix(in srgb, #eaf6ff, #ffffff 45%) 0%, #ffffff 55%, color-mix(in srgb, #eef9f3, #ffffff 50%) 100%);
